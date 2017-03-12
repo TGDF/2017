@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const IsDevMode = process.env.NODE_ENV == "development";
+const IsDevMode = process.env.NODE_ENV != "development";
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, "src/index.html"),
     filename: 'index.html',
@@ -38,7 +38,7 @@ const plugins = () => {
     plugins.push(new webpack.optimize.UglifyJsPlugin());
     if(IsDevMode) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
-        plugsin.push(new webpack.NamedModulesPlugin());
+        plugins.push(new webpack.NamedModulesPlugin());
         plugins.push(new webpack.NoEmitOnErrorsPlugin())
     }
     return plugins;
@@ -49,7 +49,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "public"),
         filename: 'bundle.js',
-        publicPath: "/static/",
+        publicPath: IsDevMode ? "/" : "/static/",
     },
     resolve: {
         extensions: ['.js', '.jsx']

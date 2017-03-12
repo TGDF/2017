@@ -7,7 +7,7 @@ import Footer from './Footer';
 const App = () => (
   <div>
     <Header />
-    <div>Site is under develop...</div>
+    <div id="coming-soon">Coming Soon...</div>
     <Footer />
   </div>
 );
