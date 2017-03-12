@@ -32,3 +32,5 @@ set :default_env, { node_env: 'production' }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+after 'deploy', 'pm2:restart'

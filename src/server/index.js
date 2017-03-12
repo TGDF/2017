@@ -33,21 +33,21 @@ function renderFullPage(html, preloadedState) {
     <html>
       <head>
         <title>台灣遊戲開發者論壇</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="/static/style.css" rel="stylesheet">
       </head>
       <body>
         <div id="app">${html}</div>
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\x3c')}
         </script>
-        <script src="/bundle.js"></script>
+        <script src="/static/bundle.js"></script>
       </body>
     </html>
     `
 }
 
 app.set('env', 'production');
-app.use('/', Express.static(__dirname + '/../../public'));
+app.use('/static', Express.static(__dirname + '/../../public'));
 app.use(handleRender);
 
 app.listen(port, (error) => {
