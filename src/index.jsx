@@ -6,7 +6,7 @@ import { fromJS } from 'immutable';
 import { AppContainer } from 'react-hot-loader';
 
 import './styles/application.scss';
-import configureStore from '../common/store/configureStore';
+import configureStore from './store/configureStore';
 import App from './components/App';
 
 const initialState = window.__PRELOADED_STATE__;

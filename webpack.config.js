@@ -22,7 +22,7 @@ const entry = () => {
         entries.push(`webpack-dev-server/client?http://localhost:${port}`);
         entries.push('webpack/hot/only-dev-server');
     }
-    entries.push(path.resolve(__dirname, "src/client/index.jsx"));
+    entries.push(path.resolve(__dirname, "src/index.jsx"));
     return entries;
 }
 
@@ -35,6 +35,7 @@ const plugins = () => {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }
     }));
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
     if(IsDevMode) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugsin.push(new webpack.NamedModulesPlugin());
