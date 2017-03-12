@@ -58,5 +58,3 @@ typings/
 .env
 
 public/index.html
-public/bundle.js
-public/style.css

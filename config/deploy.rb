@@ -32,27 +32,3 @@ set :default_env, { node_env: 'production' }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-namespace :pm2 do
-  task :start do
-    on roles(:app) do
-      within shared_path do
-        execute :pm2, 'start processes.json'
-      end
-    end
-  end
-
-  task :restart do
-    on roles(:app) do
-      execute :pm2, 'startOrReload front-end'
-    end
-  end
-
-  task :stop do
-    on roles(:app) do
-      execute :pm2, 'stop front-end'
-    end
-  end
-end
-
-after 'deploy', 'pm2:restart'
