@@ -3,25 +3,48 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const IsDevMode = process.env.NODE_ENV == "development";
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, "src/index.html"),
     filename: 'index.html',
     inject: 'body',
 });
 
-const extractSass = new ExtractTextPlugin({
+const ExtractSass = new ExtractTextPlugin({
     filename: "style.css",
 });
 
 const port = process.env.PORT || 3000;
+const entry = () => {
+    let entries = [];
+    if(IsDevMode) {
+        entries.push('react-hot-loader/patch');
+        entries.push(`webpack-dev-server/client?http://localhost:${port}`);
+        entries.push('webpack/hot/only-dev-server');
+    }
+    entries.push(path.resolve(__dirname, "src/client/index.jsx"));
+    return entries;
+}
+
+const plugins = () => {
+    let plugins = [];
+    plugins.push(HTMLWebpackPluginConfig);
+    plugins.push(ExtractSass);
+    plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }
+    }));
+    if(IsDevMode) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugsin.push(new webpack.NamedModulesPlugin());
+        plugins.push(new webpack.NoEmitOnErrorsPlugin())
+    }
+    return plugins;
+}
 
 module.exports = {
-    entry: [
-        'react-hot-loader/patch',
-        `webpack-dev-server/client?http://localhost:${port}`,
-        'webpack/hot/only-dev-server',
-        './src/client/index.jsx',
-    ],
+    entry: entry(),
     output: {
         path: path.resolve(__dirname, "public"),
         filename: 'bundle.js',
@@ -49,7 +72,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: extractSass.extract({
+                use: ExtractSass.extract({
                     use: [{
                         loader: "css-loader"
                     }, {
@@ -62,16 +85,10 @@ module.exports = {
             },
         ],
     },
-    devtool: "#inline-source-map",
+    devtool: IsDevMode ? "eval" : false,
     devServer: {
         port: port,
-        hot: true,
+        hot: IsDevMode,
     },
-    plugins: [
-        HTMLWebpackPluginConfig,
-        extractSass,
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
-    ],
+    plugins: plugins(),
 };
