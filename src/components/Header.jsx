@@ -1,6 +1,12 @@
 import React from 'react';
 import 'react-dom';
 
-const Header = () => (<div />);
+import Navigation from './Navigation';
+
+const Header = () => (
+  <header>
+    <Navigation />
+  </header>
+);
 
 export default Header;

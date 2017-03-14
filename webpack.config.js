@@ -91,6 +91,7 @@ module.exports = {
     devServer: {
         port: port,
         hot: IsDevMode,
+        historyApiFallback: true,
     },
     plugins: plugins(),
 };
