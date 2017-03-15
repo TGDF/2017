@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const IsDevMode = process.env.NODE_ENV != "development";
+const IsDevMode = process.env.NODE_ENV != "production";
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, "src/index.html"),
     filename: 'index.html',
