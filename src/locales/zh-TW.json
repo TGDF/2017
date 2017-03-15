@@ -1,5 +1,14 @@
 {
   "site_name": "台灣遊戲開發者論壇",
+  "nav": {
+    "home": "首頁",
+    "schedule": "議程表",
+    "speakers": "講師陣容",
+    "partners": "合作夥伴",
+    "register": "立即購票",
+    "facebook": "粉絲團",
+    "archive": "歷年回顧"
+  },
   "english": "English",
   "chinese": "繁體中文"
 }

@@ -1,5 +1,14 @@
 {
   "site_name": "Taiwan Game Developer Forum",
+  "nav": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "speakers": "Speakers",
+    "partners": "Partners",
+    "register": "Register",
+    "facebook": "Facebook",
+    "archive": "Archive"
+  },
   "english": "English",
   "chinese": "繁體中文"
 }
