@@ -4,6 +4,8 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import { translate } from 'react-i18next';
+import NavigationLanguageSwitcher from './NavigationLanguageSwitcher';
 
 const NavigationItem = ({ to, exact, children }) => (
   <Route
@@ -27,21 +29,26 @@ NavigationItem.propTypes = {
   exact: React.PropTypes.bool,
 };
 
-const Navigation = () => (
+const Navigation = ({ t }) => (
   <nav className="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
     <div className="container">
       <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation">
         <span className="navbar-toggler-icon" />
       </button>
-      <Link className="navbar-brand" to="/">TGDF</Link>
+      <Link className="navbar-brand" to="/">{t('site_name')}</Link>
       <div className="collapse navbar-collapse" id="navigation">
         <ul className="navbar-nav">
           <NavigationItem exact to="/">Home</NavigationItem>
           <NavigationItem to="/schedule">Schedule</NavigationItem>
+          <NavigationLanguageSwitcher />
         </ul>
       </div>
     </div>
   </nav>
 );
 
-export default Navigation;
+Navigation.propTypes = {
+  t: React.PropTypes.func.isRequired,
+};
+
+export default translate()(Navigation);

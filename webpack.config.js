@@ -85,6 +85,10 @@ module.exports = {
                     }]
                 }),
             },
+            {
+                test: /\.json$/,
+                use: 'json-loader',
+            }
         ],
     },
     devtool: IsDevMode ? "eval" : false,
