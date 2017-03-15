@@ -14,8 +14,10 @@ const App = () => (
   <Router>
     <div>
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route path="/schedule" component={Schedule} />
+      <div id="wrapper">
+        <Route exact path="/" component={Home} />
+        <Route path="/schedule" component={Schedule} />
+      </div>
       <Footer />
     </div>
   </Router>

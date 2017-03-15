@@ -1,0 +1,21 @@
+.hero-image {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    display: block;
+    padding-top: 9 / 16 * 100%;
+    content: "";
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

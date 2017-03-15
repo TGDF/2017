@@ -1,0 +1,23 @@
+.cfp {
+  background-image: url('../assets/landing_1.jpg');
+}
+
+.cfp__introduce {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+  left: 0;
+  padding: 40px 60px;
+
+  background: rgba($white, .95);
+}
+
+.cfp__information {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  left: 70%;
+  padding: 40px;
+
+  color: $white;
+}

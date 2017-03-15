@@ -1,20 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech');
 
-body {
-  background: #EFEFEF;
+@import 'variables';
+@import 'base';
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+// Modules
+@import 'modules/hero-image';
+@import 'modules/footer';
 
-#coming-soon {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+// Layouts
+@import 'layouts/home';
 
-  font-family: "Share Tech", sans-serif;
-  font-size: 48px;
-
-  transform: translate(-50%, -50%);
-}

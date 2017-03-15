@@ -88,6 +88,10 @@ module.exports = {
             {
                 test: /\.json$/,
                 use: 'json-loader',
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                use: 'url-loader',
             }
         ],
     },

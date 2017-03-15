@@ -1,0 +1,22 @@
+body {
+  padding-top: 55px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#coming-soon {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  font-family: "Share Tech", sans-serif;
+  font-size: 48px;
+
+  transform: translate(-50%, -50%);
+}
+
+#wrapper {
+  min-height: calc(100vh - 120px);
+}

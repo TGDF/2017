@@ -37,6 +37,7 @@ const Navigation = ({ t }) => (
       <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation">
         <span className="navbar-toggler-icon" />
       </button>
+      <span className="navbar-brand">TGDF</span>
       <div className="collapse navbar-collapse" id="navigation">
         <ul className="navbar-nav mr-auto">
           <NavigationItem exact to="/">{t('nav.home')}</NavigationItem>
