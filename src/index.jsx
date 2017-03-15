@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { fromJS } from 'immutable';
 import { AppContainer } from 'react-hot-loader';
 import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './styles/application.scss';
 import configureStore from './store/configureStore';
@@ -19,7 +20,9 @@ const render = (Component) => {
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
         <AppContainer>
-          <Component />
+          <Router>
+            <Component />
+          </Router>
         </AppContainer>
       </I18nextProvider>
     </Provider>,

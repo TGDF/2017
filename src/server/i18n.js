@@ -17,10 +17,10 @@ i18n
       },
       resources: {
         'zh-TW': {
-          translation: require('./locales/zh-TW.json'), // eslint-disable-line global-require
+            translation: require('../locales/zh-TW.json'),
         },
         en: {
-          translation: require('./locales/en.json'), // eslint-disable-line global-require
+            translation: require('../locales/en.json'),
         },
       },
     });
