@@ -4,9 +4,9 @@
 
 .cfp__introduce {
   position: absolute;
-  right: 30%;
-  bottom: 10%;
-  left: 0;
+  right: 10%;
+  bottom: -20px;
+  left: 10%;
   padding: 40px 60px;
 
   background: rgba($white, .95);
@@ -15,9 +15,20 @@
 .cfp__information {
   position: absolute;
   right: 0;
-  bottom: 10%;
-  left: 70%;
-  padding: 40px;
+  top: 0;
+  left: 0;
 
+  text-align: center;
   color: $white;
+
+  transform: translate(0, -100%);
+}
+
+.cfp__date {
+  margin-bottom: 0;
+
+  font-size: 2em;
+  font-family: "Share Tech", sans-serif;
+
+  text-shadow: 0 0 15px $black;
 }

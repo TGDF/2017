@@ -7,13 +7,13 @@ const Home = ({ t }) => (
     <div className="content">
       <section className="cfp__introduce">
         {t('home.cfp.introduce')}
-      </section>
-      <section className="cfp__information">
-        <p className="cfp__date">{t('home.cfp.date')}</p>
-        <p className="cfp__location">{t('home.cfp.location')}</p>
-        <p className="cfp__button">
-          <a className="btn btn-warning" href="http://igda-tw.kktix.cc/events/tgdf2017-cfp">{t('home.cfp.call_for_paper')}</a>
-        </p>
+        <aside className="cfp__information">
+          <p className="cfp__date">{t('home.cfp.date')}</p>
+          <p className="cfp__location">{t('home.cfp.location')}</p>
+          <p className="cfp__button">
+            <a className="btn btn-warning" href="http://igda-tw.kktix.cc/events/tgdf2017-cfp">{t('home.cfp.call_for_paper')}</a>
+          </p>
+        </aside>
       </section>
     </div>
   </section>
