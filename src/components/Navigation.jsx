@@ -1,35 +1,8 @@
 import React from 'react';
 import 'react-dom';
-import {
-  Route,
-  Link,
-} from 'react-router-dom';
 import { translate } from 'react-i18next';
 import NavigationLanguageSwitcher from './NavigationLanguageSwitcher';
-
-const NavigationItem = ({ to, disabled, exact, children }) => (
-  <Route
-    exact={exact}
-    path={to}
-    children={({ match }) => ( // eslint-disable-line react/no-children-prop
-      <li className={match ? 'nav-item active' : 'nav-item'}>
-        <Link className={disabled ? 'nav-link disabled' : 'nav-link'} to={to}>{children}</Link>
-      </li>
-      )}
-  />
-);
-
-NavigationItem.defaultProps = {
-  exact: false,
-  disabled: false,
-};
-
-NavigationItem.propTypes = {
-  to: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  exact: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-};
+import NavigationItem from './NavigationItem';
 
 const Navigation = ({ t }) => (
   <nav className="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
