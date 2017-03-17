@@ -43,7 +43,7 @@ function renderFullPage(html, preloadedState) {
     <!doctype html>
     <html>
       <head>
-        <title>台灣遊戲開發者論壇</title>
+        <title>台北遊戲開發者論壇</title>
         <link href="/static/style.css" rel="stylesheet">
       </head>
       <body>
