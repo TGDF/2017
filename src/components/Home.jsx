@@ -1,9 +1,11 @@
 import React from 'react';
 import 'react-dom';
 import { translate } from 'react-i18next';
+import Helmet from 'react-helmet';
 
 const Home = ({ t }) => (
   <section className="hero-image cfp">
+    <Helmet title={t('site_name')} />
     <div className="content">
       <section className="cfp__introduce">
         {t('home.cfp.introduce')}
