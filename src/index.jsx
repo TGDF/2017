@@ -9,11 +9,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './styles/application.scss';
 import configureStore from './store/configureStore';
+import { requestPosts } from './actions/posts';
 import i18n from './i18n';
 import App from './components/App';
 
 const initialState = window.__PRELOADED_STATE__;
 const store = configureStore(fromJS(initialState));
+store.dispatch(requestPosts());
 
 const render = (Component) => {
   ReactDOM.render(
