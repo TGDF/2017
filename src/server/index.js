@@ -17,6 +17,7 @@ import i18n from './i18n';
 
 const app = new Express();
 const port = process.env.PORT || 3000;
+const context = {};
 
 function handleRender(req, res) {
     // TODO: Request to API and fetch web page information
@@ -25,7 +26,7 @@ function handleRender(req, res) {
     const html = renderToString(
         <Provider store={store}>
             <I18nextProvider i18n={i18n}>
-                <Router>
+                <Router url={req.url} context={context}>
                     <App />
                 </Router>
             </I18nextProvider>
