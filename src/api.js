@@ -4,8 +4,8 @@ import i18n from './i18n';
 
 const isEnglish = () => i18n.language !== 'zh-TW';
 
-const ZH_ENDPOINT = 'https://2017.tgdf.tw/wp-json';
-const EN_ENDPOINT = 'https://2017.tgdf.tw/wp-json'; // TODO: Provide English site
+const ZH_ENDPOINT = process.env.ZH_ENDPOINT || 'https://2017.tgdf.tw/wp-json';
+const EN_ENDPOINT = process.env.EN_ENDPOINT || 'https://2017.tgdf.tw/wp-json'; // TODO: Provide English site
 const API_INSTANCE = {};
 
 const API = () => {

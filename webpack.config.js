@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const DotenvPlugin = require('dotenv-webpack');
 
 const IsDevMode = process.env.NODE_ENV != "production";
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -12,6 +13,11 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const ExtractSass = new ExtractTextPlugin({
     filename: "style.css",
+});
+
+const Dotenv = new DotenvPlugin({
+    path: './.env',
+    safe: true,
 });
 
 const port = process.env.PORT || 3000;
@@ -39,7 +45,8 @@ const plugins = () => {
     if(IsDevMode) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new webpack.NamedModulesPlugin());
-        plugins.push(new webpack.NoEmitOnErrorsPlugin())
+        plugins.push(new webpack.NoEmitOnErrorsPlugin());
+        plugins.push(Dotenv);
     }
     return plugins;
 }
