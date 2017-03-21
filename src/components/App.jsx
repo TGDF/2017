@@ -8,7 +8,7 @@ import Home from './Home';
 import Schedule from './Schedule';
 
 const App = () => (
-  <div>
+  <div id="page-wrapper">
     <Header />
     <div id="wrapper">
       <Route exact path="/" component={Home} />

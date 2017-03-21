@@ -1,12 +1,26 @@
 import React from 'react';
 import 'react-dom';
+import { translate } from 'react-i18next';
+import { Route } from 'react-router-dom';
 
 import Navigation from './Navigation';
+import Banner from './Banner';
+import Introduce from './Introduce';
 
-const Header = () => (
-  <header>
-    <Navigation />
-  </header>
+const Header = ({ t }) => (
+  <div id="header-wrapper">
+    <header id="header">
+      <h1>{t('site_name')}</h1>
+      <Navigation />
+      <Route exact path="/" component={Banner} />
+      <Route exact path="/" component={Introduce} />
+    </header>
+  </div>
 );
 
-export default Header;
+Header.propTypes = {
+  t: React.PropTypes.func.isRequired,
+};
+
+
+export default translate()(Header);

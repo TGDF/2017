@@ -1,27 +1,7 @@
-.cfp {
-  background-image: url('../assets/landing_1.jpg');
-}
+.cfp__button {
+  margin-top: 20px;
 
-.cfp__introduce {
-  position: absolute;
-  top: 50%;
-  right: 40%;
-  left: 0;
-  padding: 40px 60px;
-
-  background: rgba($black, .85);
-  color: $white;
-
-  transform: translate(0, -50%);
-}
-
-.cfp__information {
-  margin-top: 2em;
-}
-
-.cfp__date {
-  margin-bottom: 0;
-
-  font-size: 1.5em;
-  font-family: "Share Tech", sans-serif;
+  .button {
+    font-size: 14px;
+  }
 }
