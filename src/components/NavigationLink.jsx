@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const NavigationLink = ({ to, disabled, children }) => {
   if (disabled) {
-    return <a className="nav-link disabled">{children}</a>;
+    return <a className="nav-link link disabled">{children}</a>;
   }
-  return <Link className="nav-link" to={to}>{children}</Link>;
+  return <Link className="nav-link link" to={to}>{children}</Link>;
 };
 
 NavigationLink.defaultProps = {

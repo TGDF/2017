@@ -12,6 +12,7 @@ import configureStore from './store/configureStore';
 import { requestPosts } from './actions/posts';
 import i18n from './i18n';
 import App from './components/App';
+import MobileNavigation from './components/MobileNavigation';
 
 const initialState = window.__PRELOADED_STATE__;
 const store = configureStore(fromJS(initialState));
@@ -23,7 +24,10 @@ const render = (Component) => {
       <I18nextProvider i18n={i18n}>
         <AppContainer>
           <Router>
-            <Component />
+            <div>
+              <Component />
+              <MobileNavigation />
+            </div>
           </Router>
         </AppContainer>
       </I18nextProvider>

@@ -1,4 +1,5 @@
 import Express from 'express';
+import { readFileSync } from 'fs';
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -14,6 +15,8 @@ import {
 import configureStore from '../store/configureStore';
 import App from '../components/App';
 import i18n from './i18n';
+
+const TEMPLATE = readFileSync(__dirname + '/../../public/index.html').toString();
 
 const app = new Express();
 const port = process.env.PORT || 3000;
@@ -39,23 +42,7 @@ function handleRender(req, res) {
 }
 
 function renderFullPage(html, preloadedState) {
-  // Load bundled template instead direct write code
-  return `
-    <!doctype html>
-    <html>
-      <head>
-        <title>台北遊戲開發者論壇</title>
-        <link href="/static/style.css" rel="stylesheet">
-      </head>
-      <body>
-        <div id="app">${html}</div>
-        <script>
-          window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\x3c')}
-        </script>
-        <script src="/static/bundle.js"></script>
-      </body>
-    </html>
-    `
+    return TEMPLATE.replace('__HTML__', html);
 }
 
 app.set('env', 'production');

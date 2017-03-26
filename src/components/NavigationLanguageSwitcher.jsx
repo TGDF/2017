@@ -15,8 +15,8 @@ const ChangeLanguage = (event) => {
 };
 
 const NavigationLanguageSwitcher = ({ t }) => (
-  <li className="nav-item">
-    <a href="#switch-language" onClick={ChangeLanguage} className="nav-link">{t(isEnglish() ? 'chinese' : 'english')}</a>
+  <li className="link nav-item">
+    <a href="#switch-language" onClick={ChangeLanguage} className="nav-link link">{t(isEnglish() ? 'chinese' : 'english')}</a>
   </li>
 );
 

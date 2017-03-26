@@ -111,6 +111,7 @@ module.exports = {
         port: port,
         hot: IsDevMode,
         historyApiFallback: true,
+        contentBase: path.resolve('public'),
     },
     plugins: plugins(),
 };

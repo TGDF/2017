@@ -9,7 +9,7 @@ const NavigationItem = ({ to, disabled, exact, children }) => (
     exact={exact}
     path={to}
     children={({ match }) => ( // eslint-disable-line react/no-children-prop
-      <li className={match ? 'current' : ''}>
+      <li className={match ? 'link current' : 'link'}>
         <NavigationLink disabled={disabled} to={to}>{children}</NavigationLink>
       </li>
       )}
