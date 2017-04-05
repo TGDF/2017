@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 import Banner from './Banner';
 import Introduce from './Introduce';
 
-import logo from './../assets/tgdf_logo_2017_web.png';
+import logo from './../assets/tgdf_logo_2017_web.jpg';
 
 const Header = ({ t }) => (
   <div id="header-wrapper">
