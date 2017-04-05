@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 import Banner from './Banner';
 import Introduce from './Introduce';
 
-const Header = ({ t }) => (
+const Header = () => (
   <div id="header-wrapper">
     <header id="header">
       <div id="logo"></div>
