@@ -1,10 +1,12 @@
 .logo {
-  content: url('../assets/tgdf_logo_2017_web.png');
-  width: 800px;
-  height: 124px;
-  margin-bottom: 30px;
-  margin-left: -15px;
-  display: inline;
+  min-height: 124px;
+
+  background: url('../assets/tgdf_logo_2017_web.png') center no-repeat;
+  background-size: contain;
+
+  text-indent: -100em;
+
+  overflow: hidden;
 }
 
 .cfp__button {

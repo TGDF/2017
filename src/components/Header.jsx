@@ -7,10 +7,10 @@ import Navigation from './Navigation';
 import Banner from './Banner';
 import Introduce from './Introduce';
 
-const Header = () => (
+const Header = ({ t }) => (
   <div id="header-wrapper">
     <header id="header">
-      <div className="logo" />
+      <h1 className="logo">{t('site_name')}</h1>
       <Navigation />
       <Route exact path="/" component={Banner} />
       <Route exact path="/" component={Introduce} />
