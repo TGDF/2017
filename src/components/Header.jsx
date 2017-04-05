@@ -10,7 +10,7 @@ import Introduce from './Introduce';
 const Header = () => (
   <div id="header-wrapper">
     <header id="header">
-      <div id="logo" />
+      <div className="logo" />
       <Navigation />
       <Route exact path="/" component={Banner} />
       <Route exact path="/" component={Introduce} />
