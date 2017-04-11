@@ -4,16 +4,26 @@ import { translate } from 'react-i18next';
 import Helmet from 'react-helmet';
 
 import Container from '../containers/HomeContainer';
+import { requestSponsors, requestSponsorLevels } from '../actions/sponsors';
 
-const Home = ({ t }) => (
-  <section>
-    <Helmet title={t('site_name')} />
-  </section>
-);
+class Home extends React.Component {
+  componentWillMount() {
+    this.props.dispatch(requestSponsors());
+    this.props.dispatch(requestSponsorLevels());
+  }
+
+  render() {
+    return (
+      <section>
+        <Helmet title={this.props.t('site_name')} />
+      </section>
+    );
+  }
+}
 
 Home.propTypes = {
   t: React.PropTypes.func.isRequired,
-  // TODO: posts: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  dispatch: React.PropTypes.func.isRequired,
 };
 
 export default translate()(Container(Home));
