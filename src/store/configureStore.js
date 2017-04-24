@@ -3,11 +3,19 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from '../reducers';
 
+const middlewares = () => {
+  if (process.env === 'production') {
+    return applyMiddleware(thunk);
+  }
+
+  return applyMiddleware(createLogger({ stateTransformer: state => state.toJS() }), thunk);
+};
+
 export default function configureStore(preloadedState) {
   const store = createStore(
     rootReducer,
     preloadedState,
-    applyMiddleware(createLogger({ stateTransformer: state => state.toJS() }), thunk),
+    middlewares(),
   );
 
   if (module.hot) {
