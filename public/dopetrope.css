@@ -1654,7 +1654,7 @@
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../assets/vendor/pic01.jpg");
+		/* background: #CCE8F4 url("../assets/vendor/pic01.jpg"); */
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -1718,7 +1718,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("../assets/vendor/bg01.png");
+			/* background: url("../assets/vendor/bg01.png"); */
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
