@@ -5,17 +5,17 @@ import { translate } from 'react-i18next';
 import PartnerItem from './PartnerItem';
 
 const PartnerSection = ({ sponsors, level }) => {
-  const selected = sponsors.filter(sponsor => sponsor.level === level.id)
-                           .groupBy((_, key) => Math.floor(key / 4));
+  const selected = sponsors.filter(sponsor => sponsor.level === level.id);
+
   return (
     <section>
       <header className="major">
         <h2>{level.name}</h2>
       </header>
       {
-        selected.toList().map(group => (
-          <div key={group} className="row">
-            {group.map(sponsor => <PartnerItem key={sponsor.id} sponsor={sponsor} />)}
+        selected.toList().map(item => (
+          <div key={item.id} className="row">
+            <PartnerItem sponsor={item} />
           </div>
         ))
       }
