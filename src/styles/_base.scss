@@ -1,8 +1,42 @@
 body {
+  background-image: url("../assets/vendor/bg02.png");
+
   line-height: 1.5;
   font-family: 'LantingHei TC', 'JhentHei UI', 'Jhenghei UI', Helvetica, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+// Dopetrope
+
+#main-wrapper {
+  background: #f7f7f7 url("../assets/vendor/bg02.png");
+
+  &:before {
+    background: url("../assets/vendor/bg01.png");
+  }
+
+  .major h2 {
+    background: #f7f7f7 url("../assets/vendor/bg02.png");
+  }
+}
+
+#footer-wrapper {
+  &:before {
+    background: url("../assets/vendor/bg01.png");
+    background-size: 100% 100%;
+  }
+}
+
+#navPanel {
+  background-image: url("../assets/vendor/bg02.png");
+}
+
+#banner {
+  background: #CCE8F4 url("../assets/vendor/pic01.jpg");
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }

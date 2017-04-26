@@ -6,6 +6,8 @@ import Helmet from 'react-helmet';
 import Container from '../containers/HomeContainer';
 import { requestSponsors, requestSponsorLevels } from '../actions/sponsors';
 
+import Partner from './home/Partner';
+
 class Home extends React.Component {
   componentWillMount() {
     this.props.dispatch(requestSponsors());
@@ -14,9 +16,10 @@ class Home extends React.Component {
 
   render() {
     return (
-      <section>
+      <div>
         <Helmet title={this.props.t('site_name')} />
-      </section>
+        <Partner {...this.props} />
+      </div>
     );
   }
 }
