@@ -28,3 +28,15 @@
     margin: 0;
   }
 }
+
+#banner {
+  background: none;
+}
+
+.home-slider.home-slider.home-slider {
+  margin: -8em 0;
+
+  @media screen and (max-width: 736px) {
+    margin: -6em 0;
+  }
+}
