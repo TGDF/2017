@@ -7,6 +7,7 @@ import Container from '../containers/HomeContainer';
 import { requestSponsors, requestSponsorLevels } from '../actions/sponsors';
 
 import Partner from './home/Partner';
+import Article from './home/Article';
 
 class Home extends React.Component {
   componentWillMount() {
@@ -18,6 +19,7 @@ class Home extends React.Component {
     return (
       <div>
         <Helmet title={this.props.t('site_name')} />
+        <Article {...this.props} />
         <Partner {...this.props} />
       </div>
     );
