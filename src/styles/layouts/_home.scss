@@ -39,4 +39,15 @@
   @media screen and (max-width: 736px) {
     margin: -6em 0;
   }
+
+  .slider {
+    padding-top: 46.9%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .slider1 { background-image: url('../assets/slides/slide_1.jpg'); }
+  .slider2 { background-image: url('../assets/slides/slide_2.jpg'); }
 }
