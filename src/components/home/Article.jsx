@@ -6,6 +6,9 @@ import { translate } from 'react-i18next';
 const ArticleItem = ({ post }) => (
   <div className="4u 12u(mobile)">
     <section className="box">
+      <a href="" className="image featured">
+        <img src={post.thumbnail} alt={post.title} />
+      </a>
       <header><h3>{post.title}</h3></header>
       <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
     </section>
