@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 
 const Banner = () => (
   <section id="banner">
-    <Slider className="home-slider" arrows={false} dots={false} pauseOnHover={false}>
+    <Slider className="home-slider" autoplay arrows={false} dots={false} pauseOnHover={false}>
       <div><div className="slider slider1" /></div>
       <div><div className="slider slider2" /></div>
     </Slider>
