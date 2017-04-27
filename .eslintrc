@@ -6,6 +6,7 @@
   ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-danger": [0],
     "no-underscore-dangle": [2, { "allow": [__PRELOADED_STATE__] }],
   },
   "env" :{

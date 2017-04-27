@@ -6,6 +6,10 @@
 @import 'variables';
 @import 'base';
 
+// 3rd-party
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 // Modules
 @import 'modules/hero-image';
 @import 'modules/footer';

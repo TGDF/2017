@@ -1,12 +1,28 @@
+import { fromJS, Record } from 'immutable';
+
 import {
     RECEIVE_POSTS,
 } from '../constants/actioTypes';
 
+const Post = Record({ title: '', excerpt: '', id: 0, content: '', thumbnail: '' });
 
-const posts = (state = { posts: [] }, action) => {
+const posts = (state = fromJS({ posts: [] }), action) => {
   switch (action.type) {
-    case RECEIVE_POSTS:
-      return { posts: action.posts };
+    case RECEIVE_POSTS: {
+      const newPosts = [];
+      action.posts.forEach((item) => {
+        if (item.id !== 0) {
+          newPosts.push(new Post({
+            id: item.id,
+            title: item.title.rendered,
+            excerpt: item.excerpt.rendered,
+            content: item.content.rendered,
+            thumbnail: item.thumbnail,
+          }));
+        }
+      });
+      return state.set('posts', state.get('posts').merge(newPosts)); // eslint-disable-line
+    }
     default:
       return state;
   }
