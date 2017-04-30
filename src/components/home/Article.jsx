@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link,
+} from 'react-router-dom';
 
 import 'react-dom';
 import { translate } from 'react-i18next';
@@ -6,9 +9,9 @@ import { translate } from 'react-i18next';
 const ArticleItem = ({ post }) => (
   <div className="4u 12u(mobile)">
     <section className="box">
-      <a href="" className="image featured">
+      <Link to={`/article/${post.id}`} className="image featured">
         <img src={post.thumbnail} alt={post.title} />
-      </a>
+      </Link>
       <header><h3>{post.title}</h3></header>
       <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
     </section>

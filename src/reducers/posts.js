@@ -4,7 +4,7 @@ import {
     RECEIVE_POSTS,
 } from '../constants/actioTypes';
 
-const Post = Record({ title: '', excerpt: '', id: 0, content: '', thumbnail: '' });
+const Post = Record({ title: '', excerpt: '', id: 0, content: '', thumbnail: '', hero: '' });
 
 const posts = (state = fromJS({ posts: [] }), action) => {
   switch (action.type) {
@@ -17,6 +17,7 @@ const posts = (state = fromJS({ posts: [] }), action) => {
             title: item.title.rendered,
             excerpt: item.excerpt.rendered,
             content: item.content.rendered,
+            hero: item.hero,
             thumbnail: item.thumbnail,
           }));
         }
