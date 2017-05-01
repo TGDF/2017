@@ -13,7 +13,6 @@ const Navigation = ({ t }) => (
         <NavigationItem disabled to="/speakers">{t('nav.speakers')}</NavigationItem>
         <NavigationItem to="/partners">{t('nav.partners')}</NavigationItem>
         <NavigationItem disabled to="/register">{t('nav.register')}</NavigationItem>
-        <NavigationItem disabled to="/archive">{t('nav.archive')}</NavigationItem>
         <NavigationLanguageSwitcher />
       </ul>
     </nav>
