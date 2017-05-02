@@ -12,6 +12,8 @@ const setupAPI = (_API) => {
   const API = _API;
   API.sponsors = API.registerRoute('wp/v2', '/sponsors/(?P<id>\\d+)');
   API.sponsorLevels = API.registerRoute('wp/v2', '/sponsor_level/(?P<id>\\d+)');
+  API.speakers = API.registerRoute('wp/v2', '/speakers/(?P<id>\\d+)');
+  API.sessions = API.registerRoute('wp/v2', '/sessions/(?P<id>\\d+)');
 
   return API;
 };
