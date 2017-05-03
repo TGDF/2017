@@ -4,7 +4,7 @@ import {
     RECEIVE_SPEAKERS,
 } from '../constants/actioTypes';
 
-const Speaker = Record({ id: 0, name: '', thumbnail: '', avatar: '', excerpt: '', description: '' });
+const Speaker = Record({ id: 0, name: '', thumbnail: '', avatar: '', excerpt: '', description: '', session: [] });
 
 const speakers = (state = List([]), action) => {
   switch (action.type) {
@@ -19,6 +19,7 @@ const speakers = (state = List([]), action) => {
             description: item.content.rendered,
             thumbnail: item.thumbnail,
             avatar: item.avatar,
+            session: item.session,
           }));
         }
       });

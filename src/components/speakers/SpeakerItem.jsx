@@ -1,13 +1,16 @@
 import React from 'react';
 import 'react-dom';
+import {
+  Link,
+} from 'react-router-dom';
 import { translate } from 'react-i18next';
 
 const SpeakerItem = ({ speaker }) => (
   <div className="3u 12u(mobile) partner__item">
     <section className="box">
-      <a href="" className="image featured">
+      <Link to={`/speaker/${speaker.id}`} className="image featured">
         <img src={speaker.thumbnail} alt={speaker.name} />
-      </a>
+      </Link>
       <header>
         <h3>{speaker.name}</h3>
       </header>

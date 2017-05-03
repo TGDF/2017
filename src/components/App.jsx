@@ -9,6 +9,7 @@ import Schedule from './Schedule';
 import Article from './Article';
 import Partner from './Partner';
 import Speakers from './Speakers';
+import Speaker from './Speaker';
 
 const App = () => (
   <div id="page-wrapper">
@@ -18,6 +19,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/schedule" component={Schedule} />
         <Route path="/speakers" component={Speakers} />
+        <Route path="/speaker/:id" component={Speaker} />
         <Route path="/partners" component={Partner} />
         <Route path="/article/:id" component={Article} />
       </div>
