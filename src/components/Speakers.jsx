@@ -13,7 +13,7 @@ class Speakers extends React.Component {
   }
 
   speakers() {
-    return this.props.speakers.groupBy((_, index) => Math.floor(index % 4)).map(group => (
+    return this.props.speakers.groupBy((_, index) => Math.floor(index / 4)).map(group => (
       <SpeakerSection key={group} speakers={group} />
     ));
   }
