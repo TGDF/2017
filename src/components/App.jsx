@@ -10,6 +10,7 @@ import Article from './Article';
 import Partner from './Partner';
 import Speakers from './Speakers';
 import Speaker from './Speaker';
+import Opportunities from './Opportunities';
 
 const App = () => (
   <div id="page-wrapper">
@@ -21,6 +22,7 @@ const App = () => (
         <Route path="/speakers" component={Speakers} />
         <Route path="/speaker/:id" component={Speaker} />
         <Route path="/partners" component={Partner} />
+        <Route path="/opportunities" component={Opportunities} />
         <Route path="/article/:id" component={Article} />
       </div>
     </div>
