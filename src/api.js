@@ -14,6 +14,9 @@ const setupAPI = (_API) => {
   API.sponsorLevels = API.registerRoute('wp/v2', '/sponsor_level/(?P<id>\\d+)');
   API.speakers = API.registerRoute('wp/v2', '/speakers/(?P<id>\\d+)');
   API.sessions = API.registerRoute('wp/v2', '/sessions/(?P<id>\\d+)');
+  API.session_room = API.registerRoute('wp/v2', '/session_room/(?P<id>\\d+)');
+  API.session_time = API.registerRoute('wp/v2', '/session_time/(?P<id>\\d+)');
+  API.session_type = API.registerRoute('wp/v2', '/session_type/(?P<id>\\d+)');
 
   return API;
 };

@@ -6,7 +6,9 @@ import {
 
 export const requestSpeakers = () => (
   (dispatch) => {
-    API().speakers().then(speakers => dispatch({ type: RECEIVE_SPEAKERS, speakers }));
+    API().speakers()
+         .param('per_page', 100)
+         .then(speakers => dispatch({ type: RECEIVE_SPEAKERS, speakers }));
   }
 );
 

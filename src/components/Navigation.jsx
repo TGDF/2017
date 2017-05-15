@@ -8,7 +8,7 @@ const Navigation = ({ t }) => (
   <nav id="nav">
     <ul>
       <NavigationItem exact to="/">{t('nav.home')}</NavigationItem>
-      <NavigationItem disabled to="/schedule">{t('nav.schedule')}</NavigationItem>
+      <NavigationItem to="/schedule">{t('nav.schedule')}</NavigationItem>
       <NavigationItem to="/speakers">{t('nav.speakers')}</NavigationItem>
       <NavigationItem to="/partners">{t('nav.partners')}</NavigationItem>
       <NavigationItem disabled to="/register">{t('nav.register')}</NavigationItem>
