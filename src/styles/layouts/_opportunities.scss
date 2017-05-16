@@ -1,0 +1,14 @@
+.opportunities__slider {
+  margin: -8em 0;
+
+  .slider {
+    padding-top: 46.9% * 0.75;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .slider1 { background-image: url('../assets/opportunities/img1.jpg'); }
+  .slider2 { background-image: url('../assets/opportunities/img2.jpg'); }
+}
