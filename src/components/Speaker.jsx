@@ -38,10 +38,10 @@ class Speaker extends React.Component {
       <section className="container">
         <Helmet>
           <title>{`${this.props.name} | ${this.props.t('site_name')}`}</title>
-          <meta name="og:url" content={`https://2017.tgdf.tw${this.props.location.pathname}`} />
-          <meta name="og:title" content={`${this.props.name} | ${this.props.t('site_name')}`} />
-          <meta name="og:description" content={strip(this.props.description)} />
-          <meta name="og:image" content={this.props.avatar} />
+          <meta property="og:url" content={`https://2017.tgdf.tw${this.props.location.pathname}`} />
+          <meta property="og:title" content={`${this.props.name} | ${this.props.t('site_name')}`} />
+          <meta property="og:description" content={strip(this.props.description)} />
+          <meta property="og:image" content={this.props.avatar} />
         </Helmet>
         <article className="box post">
           <div className="row">

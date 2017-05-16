@@ -11,10 +11,10 @@ const Article = ({ t, title, hero, content, location }) => (
   <section className="container">
     <Helmet>
       <title>{`${title} | ${t('site_name')}`}</title>
-      <meta name="og:url" content={`https://2017.tgdf.tw${location.pathname}`} />
-      <meta name="og:title" content={`${title} | ${t('site_name')}`} />
-      <meta name="og:description" content={strip(content)} />
-      <meta name="og:image" content={hero} />
+      <meta property="og:url" content={`https://2017.tgdf.tw${location.pathname}`} />
+      <meta property="og:title" content={`${title} | ${t('site_name')}`} />
+      <meta property="og:description" content={strip(content)} />
+      <meta property="og:image" content={hero} />
     </Helmet>
     <article className="box post">
       <a href="" className="image featured"><img src={hero} alt={title} /></a>

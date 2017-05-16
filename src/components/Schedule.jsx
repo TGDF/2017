@@ -31,10 +31,10 @@ class Schedule extends React.Component {
       <div id="coming-soon">
         <Helmet>
           <title>{`${this.props.t('nav.schedule')} | ${this.props.t('site_name')}`}</title>
-          <meta name="og:url" content="https://2017.tgdf.tw/schedule" />
-          <meta name="og:title" content={`${this.props.t('nav.schedule')} | ${this.props.t('site_name')}`} />
-          <meta name="og:description" content={this.props.t('home.cfp.introduce')} />
-          <meta name="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
+          <meta property="og:url" content="https://2017.tgdf.tw/schedule" />
+          <meta property="og:title" content={`${this.props.t('nav.schedule')} | ${this.props.t('site_name')}`} />
+          <meta property="og:description" content={this.props.t('home.cfp.introduce')} />
+          <meta property="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
         </Helmet>
         <div className="box">
           { this.tables() }

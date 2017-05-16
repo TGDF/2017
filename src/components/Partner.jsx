@@ -24,10 +24,10 @@ class Partner extends React.Component {
       <section>
         <Helmet>
           <title>{`${this.props.t('nav.partners')} | ${this.props.t('site_name')}`}</title>
-          <meta name="og:url" content="https://2017.tgdf.tw/partners" />
-          <meta name="og:title" content={`${this.props.t('nav.partners')} | ${this.props.t('site_name')}`} />
-          <meta name="og:description" content={this.props.t('home.cfp.introduce')} />
-          <meta name="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
+          <meta property="og:url" content="https://2017.tgdf.tw/partners" />
+          <meta property="og:title" content={`${this.props.t('nav.partners')} | ${this.props.t('site_name')}`} />
+          <meta property="og:description" content={this.props.t('home.cfp.introduce')} />
+          <meta property="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
         </Helmet>
         {this.partners()}
       </section>

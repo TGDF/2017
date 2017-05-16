@@ -71,7 +71,7 @@ function handleRender(req, res) {
 function renderFullPage(html, title, meta,  preloadedState) {
   return TEMPLATE.replace('__HTML__', html)
                  .replace('__TITLE__', title)
-                 .replace('__META__', meta);
+                 .replace('__META__', meta.replace(/ data-react-helmet="true"/g, ''));
 }
 
 app.set('env', 'production');

@@ -8,10 +8,10 @@ const Opportunities = ({ t }) => (
   <section id="opportunities" className="container">
     <Helmet>
       <title>{`${t('nav.opportunities')} | ${t('site_name')}`}</title>
-      <meta name="og:url" content="https://2017.tgdf.tw/opportunities" />
-      <meta name="og:title" content={`${t('nav.opportunities')} | ${t('site_name')}`} />
-      <meta name="og:description" content={t('home.cfp.introduce')} />
-      <meta name="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
+      <meta property="og:url" content="https://2017.tgdf.tw/opportunities" />
+      <meta property="og:title" content={`${t('nav.opportunities')} | ${t('site_name')}`} />
+      <meta property="og:description" content={t('home.cfp.introduce')} />
+      <meta property="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
     </Helmet>
     <article className="box post">
       <header>
