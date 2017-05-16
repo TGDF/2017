@@ -5,11 +5,11 @@ import {
 } from '../constants/actioTypes';
 
 export const requestSpeakers = () => (
-  (dispatch) => {
+  dispatch => (
     API().speakers()
-         .param('per_page', 100)
-         .then(speakers => dispatch({ type: RECEIVE_SPEAKERS, speakers }));
-  }
+    .param('per_page', 100)
+    .then(speakers => dispatch({ type: RECEIVE_SPEAKERS, speakers }))
+  )
 );
 
 export default requestSpeakers;

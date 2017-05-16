@@ -5,9 +5,9 @@ import {
 } from '../constants/actioTypes';
 
 export const requestPosts = () => (
-  (dispatch) => {
-    API().posts().then(posts => dispatch({ type: RECEIVE_POSTS, posts }));
-  }
+  dispatch => (
+    API().posts().then(posts => dispatch({ type: RECEIVE_POSTS, posts }))
+  )
 );
 
 export default requestPosts;

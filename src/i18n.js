@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 i18n
     .use(LanguageDetector)
     .init({
-      fallbackLng: 'en',
+      fallbackLng: 'zh-TW',
 
       debug: process.env.NODE_ENV !== 'production',
 
