@@ -34,7 +34,7 @@ function handleRender(req, res) {
   const store = configureStore(fromJS({}));
 
   const callback = () => {
-    const lang = req.acceptsLanguages('zh-TW', 'en');
+    const lang = req.query.lang || req.acceptsLanguages('zh-TW', 'en');
     i18n.changeLanguage(lang);
 
     const html = renderToString(
