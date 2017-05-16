@@ -20,6 +20,20 @@
     },
     "news": "Latest News"
   },
+  "register": {
+    "normal": {
+      "name": "一般票",
+      "description": "單人購票方案。"
+    },
+    "group": {
+      "name": "團體票",
+      "description": "兩人或兩人以上團體，可透過此方案購票。"
+    },
+    "student": {
+      "name": "學生票",
+      "description": "學生購票方案，報到時須出示學生證。"
+    }
+  },
   "opportunities": {
     "title": {
       "review2016": "2016 年商業媒合會回顧"

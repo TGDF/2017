@@ -10,6 +10,7 @@ import Article from './Article';
 import Partner from './Partner';
 import Speakers from './Speakers';
 import Speaker from './Speaker';
+import Register from './Register';
 import Opportunities from './Opportunities';
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/speakers" component={Speakers} />
         <Route path="/speaker/:id" component={Speaker} />
         <Route path="/partners" component={Partner} />
+        <Route path="/register" component={Register} />
         <Route path="/opportunities" component={Opportunities} />
         <Route path="/article/:id" component={Article} />
       </div>

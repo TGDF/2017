@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import Navigation from './Navigation';
 import Banner from './Banner';
 import Introduce from './Introduce';
+import RegisterHeader from './register/Header';
 
 const Header = ({ t }) => (
   <div id="header-wrapper">
@@ -14,6 +15,7 @@ const Header = ({ t }) => (
       <Navigation />
       <Route exact path="/" component={Banner} />
       <Route exact path="/" component={Introduce} />
+      <Route exact path="/register" component={RegisterHeader} />
     </header>
   </div>
 );
