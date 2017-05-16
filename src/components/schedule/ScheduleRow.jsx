@@ -9,7 +9,8 @@ import Session from './Session';
 const sessionName = (room, sessions, types) => {
   const sessionsInRoom = sessions.get(room.id);
   if (sessionsInRoom) {
-    return sessionsInRoom.map(session => <Session session={session} types={types} />);
+    return sessionsInRoom.sortBy(session => session.order)
+                         .map(session => <Session session={session} types={types} />);
   }
   return '';
 };

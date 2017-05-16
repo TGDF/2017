@@ -19,6 +19,7 @@ const Session = Record({
   speakers: [],
   time: 0,
   room: 0,
+  order: 0,
 });
 
 const Type = Record({ id: 0, name: '' });
@@ -34,6 +35,7 @@ const sessionToRecord = session => (
     speakers: session.speakers,
     time: session.session_time[1] || session.session_time[0],
     room: session.session_room[0],
+    order: session.menu_order,
   })
 );
 
