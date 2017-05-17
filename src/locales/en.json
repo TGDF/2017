@@ -22,25 +22,25 @@
   },
   "register": {
     "normal": {
-      "name": "一般票",
-      "description": "單人購票方案。"
+      "name": "Individual Pass",
+      "description": "An all-access pass to the whole event for 1 person."
     },
     "group": {
-      "name": "團體票",
-      "description": "兩人或兩人以上團體，可透過此方案購票。"
+      "name": "Group Pass",
+      "description": "Any group with at least 2 people is eligible for Group Pass."
     },
     "student": {
-      "name": "學生票",
-      "description": "學生購票方案，報到時須出示學生證。"
+      "name": "Student Pass",
+      "description": "Relevant student ID checking on-site required."
     }
   },
   "opportunities": {
     "title": {
-      "review2016": "2016 年商業媒合會回顧"
+      "review2016": "2016 Business Matchmaking Recap"
     },
-    "introduce": "為了協助台灣遊戲業者拓展海外商機、與國際營運業者交流，並且掌握最新海外市場產品需求和喜好，由台灣遊戲產業發展協會在台北遊戲開發者論壇(TGDF)期間，辦理為期2天的「商業媒合會」，將邀請國內外的遊戲內容商與發行商共同參與，促進商業合作機會。",
-    "review2016": "<p>2016年首度在TGDF期間，合併辦理商業媒合會，邀請到網易遊戲、新加坡商GoGAME、泰國WaWa marketing、芬蘭Sidora Marketing 、芬蘭Mygamez、北京有愛互動、廣州卓動等十多家海外及中國遊戲發行業者，與事先報名挑選出的26家台灣遊戲開發業者，以15分鐘一對一面談的方式進行商媒。</p><p>商媒會其間也有不少台灣遊戲發行業者如育駿科技股份有限公司、艾肯娛樂股份有限公司，唯晶數位娛樂股份有限公司，遊戲浪潮股份有限公司，艾玩天地互動娛樂科技股份有限公司，一起遊戲科技股份有限公司，酷玩線上股份有限公司，台灣大哥大股份有限公司，異軍互動娛樂有限公司等，均有派員到場參觀產品，與開發者交流互動。</p>",
-    "notice": "今年度的商業媒合會即將開始進行報名，請隨時關注本頁面動態並歡迎報名參加。"
+    "introduce": "For the growth and benefits of game developers in Taiwan and South East Asia region, expanding the business relationships with international platforms and publishers and getting connected with overseas markets, Taiwan Game Cooperation Development Association (TGCDA) holds a business matchmaking program within the period of Taipei Game Developers Forum. We welcome all publishers, developers and business development personnel to join us.",
+    "review2016": "<p>Our first ever business matchmaking program with TGDF in 2016 invited tens of publishers from all over the world, including NetEase, GoGAME, WaWa Marketing, Sidora Marketing, MyGamez, COM4LOVES, Jodoplay and more, to pair with 26 developers / content providers and engaged in 15-minute, one-to-one sessions.</p><p>Several Taiwan-based publishers also attended the event and networked with developers on-site, including Cube Magic, iCan Entertainment, WeGames, TT-Play, TaiwanMobile and more.</p>",
+    "notice": "(Google Form URLS)"
   },
   "find_more": "Find More",
   "english": "English",
