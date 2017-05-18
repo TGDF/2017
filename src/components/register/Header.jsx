@@ -2,12 +2,14 @@ import React from 'react';
 import 'react-dom';
 import { translate } from 'react-i18next';
 
+const registerUrl = 'https://kktix.com/tickets_widget?slug=2017tgdf';
+
 const Header = ({ t }) => (
   <section id="intro" className="register__header container">
     <div className="row">
       <div className="4u 12u(mobile)">
         <section className="first">
-          <a href="https://tgdf.kktix.cc/events/2017tgdf" target="_blank" rel="noopener noreferrer">
+          <a href={registerUrl} target="_blank" rel="noopener noreferrer">
             <i className="icon featured fa-user" />
           </a>
           <header>
@@ -19,7 +21,7 @@ const Header = ({ t }) => (
       </div>
       <div className="4u 12u(mobile)">
         <section className="middle">
-          <a href="https://tgdf.kktix.cc/events/2017tgdf" target="_blank" rel="noopener noreferrer">
+          <a href={registerUrl} target="_blank" rel="noopener noreferrer">
             <i className="icon featured fa-users" />
           </a>
           <header>
@@ -31,7 +33,7 @@ const Header = ({ t }) => (
       </div>
       <div className="4u 12u(mobile)">
         <section className="last">
-          <a href="https://tgdf.kktix.cc/events/2017tgdf" target="_blank" rel="noopener noreferrer">
+          <a href={registerUrl} target="_blank" rel="noopener noreferrer">
             <i className="icon featured fa-graduation-cap" />
           </a>
           <header>
