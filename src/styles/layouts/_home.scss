@@ -51,3 +51,9 @@
   .slider1 { background-image: url('../assets/slides/slide_1.jpg'); }
   .slider2 { background-image: url('../assets/slides/slide_2.jpg'); }
 }
+
+#intro .home__introduce {
+  p {
+    margin-bottom: 1em;
+  }
+}

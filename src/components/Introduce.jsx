@@ -11,7 +11,7 @@ const Introduce = ({ t }) => (
           <header>
             <h2>{t('site_name')}</h2>
           </header>
-          <p>{t('home.cfp.introduce')}</p>
+          <div className="home__introduce" dangerouslySetInnerHTML={{ __html: t('home.introduce') }} />
         </section>
       </div>
     </div>
