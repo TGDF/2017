@@ -4,6 +4,9 @@ import { translate } from 'react-i18next';
 import Helmet from 'react-helmet';
 import Slider from 'react-slick';
 
+const publisherUrl = 'https://docs.google.com/forms/d/13PUX2m2B7oHKNR3erw_1DpceKDyhbLCkaBUsLT2ZElA';
+const developerUrl = 'https://docs.google.com/forms/d/1iY_zlBze1IXfuYRcEF7w6rGzQinqr-VYwqgVpaovnR0';
+
 const Opportunities = ({ t }) => (
   // TODO: add featured image <a href="" className="image featured"><img src="" alt="" /></a>
   <section id="opportunities" className="container">
@@ -14,7 +17,7 @@ const Opportunities = ({ t }) => (
       <meta property="og:description" content={t('home.cfp.introduce')} />
       <meta property="og:image" content="https://2017.tgdf.tw/static/tgdf.png" />
     </Helmet>
-    <article className="box post ">
+    <article className="box post opportunities__description">
       <Slider className="image featured opportunities__slider" autoplay arrows={false} dots={false} pauseOnHover={false}>
         <div><div className="slider slider1" /></div>
         <div><div className="slider slider2" /></div>
@@ -30,6 +33,13 @@ const Opportunities = ({ t }) => (
         <div dangerouslySetInnerHTML={{ __html: t('opportunities.review2016') }} />
       </section>
       <p>{t('opportunities.notice')}</p>
+      <p>
+        <a href={publisherUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.publisher_text')}</a><br />
+        <a href={developerUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.developer_text')}</a>
+      </p>
+      <ul>
+        {t('opportunities.notices', { returnObjects: true }).map(notice => <li>{notice}</li>)}
+      </ul>
     </article>
   </section>
 );

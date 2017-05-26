@@ -12,3 +12,15 @@
   .slider1 { background-image: url('../assets/opportunities/img1.jpg'); }
   .slider2 { background-image: url('../assets/opportunities/img2.jpg'); }
 }
+
+.opportunities__description {
+  ul {
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+
+  li {
+    margin-bottom: .5em;
+    line-height: 1.5;
+  }
+}

@@ -14,7 +14,7 @@ const Header = ({ t }) => (
           </a>
           <header>
             <h2>{t('register.normal.name')}</h2>
-            <h3>$2500</h3>
+            <h3>TWD 2,500</h3>
           </header>
           <p>{t('register.normal.description')}</p>
         </section>
@@ -26,7 +26,7 @@ const Header = ({ t }) => (
           </a>
           <header>
             <h2>{t('register.group.name')}</h2>
-            <h3>$1800</h3>
+            <h3>TWD 1,800</h3>
           </header>
           <p>{t('register.group.description')}</p>
         </section>
@@ -38,7 +38,7 @@ const Header = ({ t }) => (
           </a>
           <header>
             <h2>{t('register.student.name')}</h2>
-            <h3>$1000</h3>
+            <h3>TWD 1,000</h3>
           </header>
           <p>{t('register.student.description')}</p>
         </section>
