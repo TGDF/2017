@@ -33,11 +33,11 @@ const Opportunities = ({ t }) => (
         <div dangerouslySetInnerHTML={{ __html: t('opportunities.review2016') }} />
       </section>
       <p>{t('opportunities.notice')}</p>
+      <a href={publisherUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.publisher_text')}</a><br />
+      <a href={developerUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.developer_text')}</a>
       <ul>
         {t('opportunities.notices', { returnObjects: true }).map(notice => <li>{notice}</li>)}
       </ul>
-      <a href={publisherUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.publisher_text')}</a><br />
-      <a href={developerUrl} target="_blank" rel="noopener noreferrer">{t('opportunities.developer_text')}</a>
     </article>
   </section>
 );
