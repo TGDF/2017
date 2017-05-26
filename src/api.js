@@ -5,7 +5,7 @@ import i18n from './i18n';
 const isEnglish = () => i18n.language !== 'zh-TW';
 
 const ZH_ENDPOINT = process.env.ZH_ENDPOINT || 'https://2017.tgdf.tw/wp-json';
-const EN_ENDPOINT = process.env.EN_ENDPOINT || 'https://2017.tgdf.tw/wp-json'; // TODO: Provide English site
+const EN_ENDPOINT = process.env.EN_ENDPOINT || 'https://2017.tgdf.tw/en/wp-json';
 const API_INSTANCE = {};
 
 const setupAPI = (_API) => {
