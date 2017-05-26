@@ -6,7 +6,7 @@
     "speakers": "Speakers",
     "partners": "Partners",
     "register": "Register",
-    "opportunities": "Opportunities",
+    "opportunities": "B2B Program",
     "facebook": "Facebook",
     "archive": "Archive"
   },
@@ -19,7 +19,7 @@
       "date": "June 30th – July 1st, 2017"
     },
     "news": "Latest News",
-    "introduce": "<p>2017 年即將邁入第六屆的台北遊戲開發者論壇（TGDF，Taipei Game Developers Forum），為台灣最大型之年度專業遊戲論壇活動，每年吸引近千名海內外開發者共襄盛舉參加。</p><p>此活動曾經邀請過重量級遊戲開發講人士如「洛克人之父」稻船敬二、「紀念碑谷」製作人Neil Macfarland、VR遊戲公司「Owlchemy Labs」創辦人Alex Schwartz等，亦有大量海內外深度遊戲設計、程式、美術專題講座與課程。自2015年起 TGDF 更加入 VR遊戲體驗、「TGDF Indie Space」遊戲作品展示區、以及商談媒合服務等。</p><p>今年TGDF預計將邀請擔任《Sega Rally》、《Rez》、《伊甸之子》的名製作人水口哲也、《世界二》OXON 執行長王樑華等人帶來精采分享外，更有《Voez》雷亞遊戲、《不思議迷宮》廈門青瓷數碼等海內外講師蒞臨演講。</p><p>在專業演講之外，本屆「TGDF Indie Space 獨立遊戲空間」更將擴大規模，將開放給來自國內報名與海外邀請共五十餘組的獨立遊戲團隊進行展示，為遊戲開發同好提供一個公開的交流平台。此外，本屆亦增設商務媒合區，HR 人才招募區、VR 展示區等，希望以更多元的體驗內容，讓遊戲開發者滿載而歸。</p>"
+    "introduce": "<p>This is the 6th annual Taipei Game Developers Forum (TGDF). It has been the biggest professional game development conference in Taiwan, gathering roughly a thousand of developers learning and networking with each other.</p><p>During the past few years, we have invited renowned developers such as Keiji Inafune, Neil Mcfarland, Alex Schwartz, and key figures such as Kelly Wallick as our keynote speakers. Besides tens of professional lectures and sessions about all aspects of game development each year, we also started VR showcases, B2B Program and more since 2015.</p><p>For 2017 TGDF, we are very excited to announce that Tetsuya Mizuguchi, the director/producer behind Rez Infinite will be one of our keynote speakers. Moreover, there is also Jason Wang, the founder of OXON, and Alvin Chung, the CTO of Rayark Inc., and a few dozen more speakers with exciting topics to share with our audience.</p><p>In addition, our 2nd TGDF Indie Space is expanding since the successful showcase last year, with estimated 50 ~ 60 teams joining us this time, and will be a free-for-all exhibiton to attract more general public / non-developer visitors. We are also going to hold a Recruitment Program with a few game-related companies along with continuing our B2B Program, in order to give an ever higher variety of benefits to the developers.</p>"
   },
   "register": {
     "normal": {
@@ -33,7 +33,19 @@
     "student": {
       "name": "Student Pass",
       "description": "Relevant student ID checking on-site required."
-    }
+    },
+    "description": "<h3>How to Purchase Passes</h3><p>Click through the pass option buttons above, make sure you choose the correct pass type and fill out the form with correct information. After your payment is processed, an e-ticket with QRcode will be emailed to your address. In order to receive the e-ticket without any hiccups, please be sure to use the email address that you will frequently check, and that any message coming from KKTIX won't end up in the spam folder.</p>",
+    "notice": "Important Notices",
+    "notices": [
+      "When you check-in for the first time during the event, be sure to bring the QRcode with you, and we will provide you with a badge and a conference bag. The badge will be used for both days, so please keep it with you at all times.",
+      "If you purchased a student pass, please show your relevant student ID along with the QRcode when you check-in.",
+      "If you are responsible for purchasing group passes, please remember to distribute the QRcode to every member of your group.",
+      "If you choose to print out the QRcode, please keep the size suitable for scanning.",
+      "For refunding, there will be a 10% processing fee, and you can only refund before June 19th ends (UTC+8). If you have any further questions about the refunding policy, please refer to KKTIX's FAQ.",
+      "Please do not purchase the passes off other unofficial channels. We will not be held responsible if your pass / QRcode is not working.",
+      "If you somehow lost your QRcode after purchase or your badge after you check-in, we will not be held responsible and cannot re-issue QRcodes or badges.",
+      "Should events beyond the reasonable control of TGDF Committee occur, we reserve the rights to make adjustments to the proceedings of TGDF."
+    ]
   },
   "opportunities": {
     "title": {
