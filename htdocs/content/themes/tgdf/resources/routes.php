@@ -11,5 +11,7 @@
 
 Route::get('home', function()
 {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('template', ['sessions', 'uses' => 'Session@index']);

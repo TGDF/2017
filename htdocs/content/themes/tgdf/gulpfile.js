@@ -241,6 +241,9 @@ gulp.task('watch', function()
     gulp.watch(dirs.src + '/stylus/**/*.styl', gulp.series('stylus:dev'));
     gulp.watch(dirs.src + '/sass/**/*.scss', gulp.series('sass:dev'));
     gulp.watch(dirs.src + '/js/**/*.js', gulp.series('webpack:dev')).on('change', bs.reload);
+
+    // Sync Views Change
+    gulp.watch('./resources/views/**/*.php').on('change', bs.reload);
 });
 
 /*------------*/

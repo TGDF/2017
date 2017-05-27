@@ -1,0 +1,59 @@
+.logo {
+  min-height: 124px;
+
+  background: url('../images/tgdf_logo_2017_web.png') center no-repeat;
+  background-size: contain;
+
+  text-indent: -100em;
+
+  overflow: hidden;
+}
+
+.cfp__button {
+  margin-top: 20px;
+
+  .button {
+    font-size: 14px;
+  }
+}
+
+.home-partner__item {
+  .box {
+    padding: 0;
+  }
+
+  .image.featured {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+}
+
+#banner {
+  background: none;
+}
+
+.home-slider.home-slider.home-slider {
+  margin: -8em 0;
+
+  @media screen and (max-width: 736px) {
+    margin: -6em 0;
+  }
+
+  .slider {
+    padding-top: 46.9%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .slider1 { background-image: url('../assets/slides/slide_1.jpg'); }
+  .slider2 { background-image: url('../assets/slides/slide_2.jpg'); }
+}
+
+#intro .home__introduce {
+  p {
+    margin-bottom: 1em;
+  }
+}

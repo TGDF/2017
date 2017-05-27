@@ -2,7 +2,6 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @charset "UTF-8";
-// @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
 /*
@@ -51,7 +50,7 @@
 
 	body {
 		background: #252122;
-		background-image: url('images/bg02.png');
+		background-image: url('../images/bg.png');
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #5d5d5d;
@@ -648,7 +647,7 @@
 
 	#main-wrapper {
 		position: relative;
-		background: #f7f7f7 url('images/bg02.png');
+		background: #f7f7f7 url('../images/bg.png');
 
 		&:before {
 			content: '';
@@ -656,7 +655,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('../images/bg.png');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
@@ -664,7 +663,7 @@
 
 		.major {
 			h2 {
-				background: #f7f7f7 url('images/bg02.png');
+				background: #f7f7f7 url('../images/bg.png');
 			}
 		}
 	}
@@ -679,7 +678,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('../images/bg.png');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
@@ -1357,7 +1356,7 @@
 				width: _size(navPanel);
 				z-index: _misc(z-index-base) + 2;
 				color: #858484;
-				background-image: url('images/bg02.png');
+				background-image: url('../images/bg.png');
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 
 				.link {

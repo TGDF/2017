@@ -1,0 +1,15 @@
+.partner__item {
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: .75em;
+  }
+
+  .box {
+    @media screen and (min-width: 737px) {
+      padding: 1.75em;
+    }
+  }
+}
