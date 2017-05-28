@@ -30,6 +30,25 @@ class Speaker extends Model
     });
   }
 
+  public function sessions() {
+    $session_ids = \Meta::get($this->ID, '_sessions', false);
+    if(!is_array($session_ids)) {
+      return;
+    }
+
+    $sessions = [];
+    foreach($session_ids as $session) {
+      $id = pll_get_post($session);
+      if($id === false) { $id = $session; }
+      if(empty($id)) { continue; }
+
+      $session = get_post($id);
+      array_push($sessions, $session);
+    }
+
+    return $sessions;
+  }
+
   static public function lang() {
     $lang = get_query_var('lang');
     $availables = pll_languages_list();

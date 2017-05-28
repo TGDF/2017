@@ -9,7 +9,12 @@ use Theme\Models;
 class Speaker extends BaseController
 {
     public function show($speaker, $query) {
-      $speaker = get_post(pll_get_post($speaker->ID));
+      $id = $speaker->ID;
+      $speaker = Models\Speaker::find(pll_get_post($id));
+
+      if(empty($speaker)) {
+        $speaker = Models\Speaker::withoutGlobalScopes()->find($id);
+      }
 
       return view('speaker.show', [
         'speaker' => $speaker
