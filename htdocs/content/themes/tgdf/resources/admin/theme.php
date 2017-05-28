@@ -22,3 +22,14 @@ pll_register_string(THEME_TEXTDOMAIN, '立即購票', 'Navigation');
 pll_register_string(THEME_TEXTDOMAIN, '商業媒合', 'Navigation');
 
 pll_register_string(THEME_TEXTDOMAIN, '閱讀更多', 'User Interface');
+
+pll_register_string(THEME_TEXTDOMAIN, 'BUY_TICKET_LINK', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '一般票', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, 'TWD 2,500', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '單人購票方案。', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '團體票', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, 'TWD 1, 800', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '兩人或兩人以上團體，可透過此方案購票。', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '學生票', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, 'TWD 1,000', 'Register');
+pll_register_string(THEME_TEXTDOMAIN, '學生購票方案，報到時須出示學生證。', 'Register');

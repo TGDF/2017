@@ -12,4 +12,6 @@ return [
      */
   'sessions' => ['Sessions', ['page']],
   'partners' => ['Partners', ['page']],
+  'register' => ['Register', ['page']],
+  'b2b' => ['B2B Program', ['page']],
 ];

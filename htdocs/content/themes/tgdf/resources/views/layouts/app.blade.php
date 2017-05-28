@@ -30,6 +30,8 @@
                   <li class="{{ is_page('opportunities') ? 'current' : '' }}"><a href="{{ home_url('/opportunities') }}">{{ pll__('商業媒合') }}</a></li>
                 </ul>
 							</nav>
+
+              @yield('header')
 					</div>
 				</div>
 
