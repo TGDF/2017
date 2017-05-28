@@ -27,7 +27,7 @@
                         <div class="schedule__session">
                           <div class="schedule__session-name">{{ $session->post_title }}</div>
                           <div class="schedule__session-speaker">
-                            {{ $session->speaker() }}
+                            @each('session.speaker', $session->speaker(), 'speaker')
                           </div>
                           @each('session.type', $session->types(), 'type')
                         </div>
@@ -40,7 +40,7 @@
                     <div class="schedule__session">
                       <div class="schedule__session-name">{{ $sessions[$time->term_id]->post_title }}</div>
                       <div class="schedule__session-speaker">
-                        {{ $sessions[$time->term_id]->speaker() }}
+                        @each('session.speaker', $sessions[$time->term_id]->speaker(), 'speaker')
                       </div>
                       @each('session.type', $sessions[$time->term_id]->types(), 'type')
                     </div>

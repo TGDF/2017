@@ -25,25 +25,24 @@ class Session extends Model
         ->join('term_relationships', 'ID', '=', 'term_relationships.object_id')
         ->join('term_taxonomy', 'term_taxonomy.term_taxonomy_id', '=', 'term_relationships.term_taxonomy_id')
         ->join('terms', 'terms.term_id', '=', 'term_taxonomy.term_id')
+        ->where('post_type', 'session')
         ->where('terms.slug', '=', self::lang());
     });
   }
 
   public function speaker() {
-    $speaker_ids = \Meta::get($this->ID, '_speakers');
+    $speaker_ids = \Meta::get($this->ID, '_speakers', false);
     if(!is_array($speaker_ids)) {
       return;
     }
 
-    $speakers = get_posts([
-      'include' => $speaker_ids,
-      'post_type' => 'speaker',
-      'lang' => Session::lang(),
-    ]);
-
-    $names = '';
-    foreach($speakers as $speaker) {
-      $names .= $speaker->post_title;
+    $names = [];
+    foreach($speaker_ids as $speaker) {
+      $id = pll_get_post($speaker);
+      if($id == false) { $id = $speaker; }
+      if(empty($id)) { continue; }
+      $speaker = get_post($id);
+      array_push($names, [pll_get_post($id, 'zh'), $speaker]);
     }
 
     return $names;

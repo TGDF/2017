@@ -1,0 +1,19 @@
+@extends('layouts.app')
+
+@section('content')
+<section class="container">
+  <article class="box post">
+    <div class="row">
+      <div class="4u 12u(mobile)">
+        <a href="" class="image"><img src="{{ get_the_post_thumbnail_url( $speaker->ID, 'speaker-full' ) }}" alt="{{ $speaker->post_title }}" /></a>
+      </div>
+      <div class="8u 12u(mobile)">
+        <header>
+          <h2>{{ $speaker->post_title }}</h2>
+        </header>
+        {{ $speaker->post_content }}
+        </div>
+      </div>
+  </article>
+</section>
+@endsection

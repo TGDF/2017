@@ -1,5 +1,7 @@
 <?php
 
+use Theme\Models\Speaker;
+
 PostType::make('session', 'Sessions', 'Session')->set([
   'public' => true,
   'menu_position' => 20,
@@ -30,4 +32,12 @@ Taxonomy::make('session_room', 'session', 'Rooms', 'Room')->set([
   'rewrite' => array( 'slug' => 'session_rooms' ),
   'hierarchical' => true,
   'show_in_rest' => true
+]);
+
+Metabox::make('Speakers', 'session')->set([
+  Field::checkbox(
+    '_speakers',
+    Speaker::all()->mapWithKeys(function($speaker) { return [$speaker->ID => ' ' . $speaker->post_title]; })->toArray(),
+    ['title' => 'Speakers']
+  )
 ]);
