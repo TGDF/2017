@@ -8,9 +8,10 @@ use Theme\Models;
 
 class Session extends BaseController
 {
-    public function index($page, $query, Models\Session $session, Models\Language $lang) {
+    public function index($page, $query, Models\Session $session) {
+      $lang = get_query_var('lang');
       $page = get_post(pll_get_post($page->ID));
-      $sessions = $session->all();
+      $sessions = Models\Session::lang($lang)->get();
 
       return view('sessions', [
         'page' => $page,

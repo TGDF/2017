@@ -25,9 +25,18 @@ class Speaker extends Model
         ->join('term_relationships', 'ID', '=', 'term_relationships.object_id')
         ->join('term_taxonomy', 'term_taxonomy.term_taxonomy_id', '=', 'term_relationships.term_taxonomy_id')
         ->join('terms', 'terms.term_id', '=', 'term_taxonomy.term_id')
-        ->where('post_type', 'speaker')
-        ->where('terms.slug', '=', self::lang());
+        ->where('post_type', 'speaker');
     });
+  }
+
+  public function scopeLang($query, $lang) {
+    $availables = pll_languages_list();
+
+    if(!in_array($lang, $availables)) {
+      $lang = pll_default_language();
+    }
+
+    return $query->where('terms.slug', $lang);
   }
 
   public function sessions() {
@@ -47,16 +56,5 @@ class Speaker extends Model
     }
 
     return $sessions;
-  }
-
-  static public function lang() {
-    $lang = get_query_var('lang');
-    $availables = pll_languages_list();
-
-    if(in_array($lang, $availables)) {
-      return $lang;
-    }
-
-    return pll_default_language();
   }
 }

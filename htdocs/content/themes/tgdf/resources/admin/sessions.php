@@ -37,7 +37,7 @@ Taxonomy::make('session_room', 'session', 'Rooms', 'Room')->set([
 Metabox::make('Speakers', 'session')->set([
   Field::checkbox(
     '_speakers',
-    Speaker::all()->mapWithKeys(function($speaker) { return [$speaker->ID => ' ' . $speaker->post_title]; })->toArray(),
+    Speaker::lang('zh')->get()->mapWithKeys(function($speaker) { return [$speaker->ID => ' ' . $speaker->post_title]; })->toArray(),
     ['title' => 'Speakers']
   )
 ]);

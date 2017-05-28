@@ -25,3 +25,11 @@ Filter::add('document_title_parts', function($title) {
   }
   return $title;
 });
+
+Filter::add('pll_set_language_from_query', function($lang, $query) {
+  $query_lang = get_query_var('lang');
+  if(empty($query_lang)) {
+    set_query_var('lang', $_COOKIE[ PLL_COOKIE ]);
+  }
+  return $lang;
+}, 1, 2);

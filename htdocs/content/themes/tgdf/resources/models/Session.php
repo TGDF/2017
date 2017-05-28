@@ -25,10 +25,20 @@ class Session extends Model
         ->join('term_relationships', 'ID', '=', 'term_relationships.object_id')
         ->join('term_taxonomy', 'term_taxonomy.term_taxonomy_id', '=', 'term_relationships.term_taxonomy_id')
         ->join('terms', 'terms.term_id', '=', 'term_taxonomy.term_id')
-        ->where('post_type', 'session')
-        ->where('terms.slug', '=', self::lang());
+        ->where('post_type', 'session');
     });
   }
+
+  public function scopeLang($query, $lang) {
+    $availables = pll_languages_list();
+
+    if(!in_array($lang, $availables)) {
+      $lang = pll_default_language();
+    }
+
+    return $query->where('terms.slug', $lang);
+  }
+
 
   public function speaker() {
     $speaker_ids = \Meta::get($this->ID, '_speakers', false);
@@ -49,7 +59,14 @@ class Session extends Model
   }
 
   public function types() {
-    $types = wp_get_post_terms($this->ID, 'session_type', ['lang' => Session::lang()]);
+    $lang = get_query_var('lang');
+    $availables = pll_languages_list();
+
+    if(!in_array($lang, $availables)) {
+      $lang = pll_default_language();
+    }
+
+    $types = wp_get_post_terms($this->ID, 'session_type', ['lang' => $lang]);
 
     $names = [];
     foreach($types as $type) {
@@ -59,26 +76,13 @@ class Session extends Model
     return $names;
   }
 
-  /*
-  public function all() {
-    $query = new \WP_Query([
-      'post_type' => 'session',
-      'posts_per_page' => -1,
-      'lang' => $this->lang(),
-      'post_status' => 'publish'
-    ]);
-
-    return $query->get_posts();
-  }
- */
-
   public function days() {
-   return get_terms(
-     'session_time',
-     [
-       'parent' => 0
-     ]
-   );
+    return get_terms(
+      'session_time',
+      [
+        'parent' => 0
+      ]
+    );
   }
 
   public function times(\WP_Term $day) {
@@ -105,16 +109,5 @@ class Session extends Model
     }
 
     return $group;
-  }
-
-  static public function lang() {
-    $lang = get_query_var('lang');
-    $availables = pll_languages_list();
-
-    if(in_array($lang, $availables)) {
-      return $lang;
-    }
-
-    return pll_default_language();
   }
 }
