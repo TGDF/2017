@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
- * Class Speaker.
+ * Class Sponsor.
  * Help you retrieve data from your $prefix_posts table.
  *
  * @package Theme\Models
  */
-class Speaker extends Model
+class Sponsor extends Model
 {
   protected $table = 'posts';
   protected $primaryKey = 'ID';
@@ -26,12 +26,16 @@ class Speaker extends Model
         ->join('term_taxonomy', 'term_taxonomy.term_taxonomy_id', '=', 'term_relationships.term_taxonomy_id')
         ->join('terms', 'terms.term_id', '=', 'term_taxonomy.term_id')
         ->where('post_status', 'publish')
-        ->where('post_type', 'speaker');
+        ->where('post_type', 'sponsor');
     });
   }
 
-  public function excerpt() {
-    return apply_filters('the_content', wp_trim_words($this->post_content));
+  public function link() {
+    return \Meta::get($this->ID, 'sponsor-link');
+  }
+
+  public function logo($size = 'sponsor-logo') {
+    return get_the_post_thumbnail_url( $this->ID, $size );
   }
 
   public function scopeLang($query, $lang) {
@@ -42,24 +46,5 @@ class Speaker extends Model
     }
 
     return $query->where('terms.slug', $lang);
-  }
-
-  public function sessions() {
-    $session_ids = \Meta::get($this->ID, '_sessions', false);
-    if(!is_array($session_ids)) {
-      return;
-    }
-
-    $sessions = [];
-    foreach($session_ids as $session) {
-      $id = pll_get_post($session);
-      if($id === false) { $id = $session; }
-      if(empty($id)) { continue; }
-
-      $session = get_post($id);
-      array_push($sessions, $session);
-    }
-
-    return $sessions;
   }
 }

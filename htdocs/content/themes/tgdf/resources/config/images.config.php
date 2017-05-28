@@ -13,6 +13,11 @@ return [
      * @param bool|array $crop Crop option. Since 3.9, define a crop position with an array.
      * @param bool|string $media Add to media selection dropdown. Make it also available to media custom field. If string, used as display name ;)
      */
-    'themosis' => [200, 150, true, true],
-
+    'post-thumbnail-small' => [374, 260, true, true],
+    'post-thumbnail-large' => [480, 272, true, true],
+    'post-thumbnail-full' => [1200, 444, true, true],
+    'speaker-small' => [256, 256, true, true],
+    'speaker-full' => [512, 512, true, true],
+    'sponsor-logo' => [600, 400, true, true],
+    'sponsor-logo-small' => [300, 200, true, true]
 ];

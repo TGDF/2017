@@ -6,7 +6,7 @@ use Themosis\Route\BaseController;
 
 use Theme\Models;
 
-class Session extends BaseController
+class SessionController extends BaseController
 {
     public function index($page, $query, Models\Session $session) {
       $lang = get_query_var('lang');

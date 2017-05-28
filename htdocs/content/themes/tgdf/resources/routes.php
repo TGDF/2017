@@ -14,7 +14,8 @@ Route::get('home', function()
     return view('home');
 });
 
-Route::get('page', ['speakers', 'uses' => 'Speaker@index']);
-Route::get('singular', ['speaker', 'uses' => 'Speaker@show']);
+Route::get('page', ['speakers', 'uses' => 'SpeakerController@index']);
+Route::get('singular', ['speaker', 'uses' => 'SpeakerController@show']);
 
-Route::get('template', ['sessions', 'uses' => 'Session@index']);
+Route::get('template', ['sessions', 'uses' => 'SessionController@index']);
+Route::get('template', ['partners', 'uses' => 'PartnerController@index']);

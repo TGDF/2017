@@ -10,6 +10,6 @@ return [
      * Since WordPress 4.7, templates can be defined for pages but
      * also on custom post types.
      */
-    'sessions' => ['Sessions', ['page']],
-
+  'sessions' => ['Sessions', ['page']],
+  'partners' => ['Partners', ['page']],
 ];

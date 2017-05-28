@@ -29,14 +29,3 @@ Action::add('wp_footer', function()
         <?php
     endif;
 });
-
-Action::add('after_setup_theme', function() {
-  add_theme_support( 'post-thumbnails' );
-
-  add_image_size( 'post-thumbnail-small', 374, 260, true );
-  add_image_size( 'post-thumbnail-large', 580, 272, true );
-  add_image_size( 'post-thumbnail-full', 1200, 444, true );
-
-  add_image_size( 'speaker-small', 256, 256, true );
-  add_image_size( 'speaker-full', 512, 512, true );
-});

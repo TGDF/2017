@@ -6,7 +6,7 @@ use Themosis\Route\BaseController;
 
 use Theme\Models;
 
-class Speaker extends BaseController
+class SpeakerController extends BaseController
 {
     public function index($speakers, $query) {
       $lang = get_query_var('lang');

@@ -25,6 +25,7 @@ class Session extends Model
         ->join('term_relationships', 'ID', '=', 'term_relationships.object_id')
         ->join('term_taxonomy', 'term_taxonomy.term_taxonomy_id', '=', 'term_relationships.term_taxonomy_id')
         ->join('terms', 'terms.term_id', '=', 'term_taxonomy.term_id')
+        ->where('post_status', 'publish')
         ->where('post_type', 'session');
     });
   }
