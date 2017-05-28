@@ -11,7 +11,7 @@
         <header>
           <h2>{{ $speaker->post_title }}</h2>
         </header>
-        {{ $speaker->post_content }}
+        {!! apply_filters('the_content', $speaker->post_content) !!}
         @if(count($speaker->sessions()) > 0)
           <hr />
           @each('speaker.session', $speaker->sessions(), 'session')

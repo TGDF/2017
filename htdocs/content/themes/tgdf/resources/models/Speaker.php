@@ -29,6 +29,10 @@ class Speaker extends Model
     });
   }
 
+  public function excerpt() {
+    return apply_filters('the_content', wp_trim_words($this->post_content));
+  }
+
   public function scopeLang($query, $lang) {
     $availables = pll_languages_list();
 

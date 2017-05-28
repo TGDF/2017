@@ -8,6 +8,15 @@ use Theme\Models;
 
 class Speaker extends BaseController
 {
+    public function index($speakers, $query) {
+      $lang = get_query_var('lang');
+      $chunks = Models\Speaker::lang($lang)->get()->chunk(4);
+
+      return view('speakers', [
+        'chunks' => $chunks
+      ]);
+    }
+
     public function show($speaker, $query) {
       $id = $speaker->ID;
       $speaker = Models\Speaker::find(pll_get_post($id));
