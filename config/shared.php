@@ -48,6 +48,4 @@ define('WP_AUTO_UPDATE_CORE', false);
 define('DISALLOW_FILE_EDIT', true);
 define('WP_DEFAULT_THEME', 'tgdf');
 
-define('PLL_AJAX_ON_FRONT', true); // Force use "Cookie" to set langauge
-
 /* That's all, stop editing! Happy blogging. */

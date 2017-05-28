@@ -4,7 +4,6 @@
  * Define your theme custom code.
  */
 
-
 // Assets
 Asset::add('dopetrope', 'css/dopetrope.min.css', false, '1.0', 'all');
 Asset::add('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, '1.0', 'all');

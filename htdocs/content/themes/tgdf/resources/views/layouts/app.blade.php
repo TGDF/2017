@@ -23,7 +23,7 @@
 							<nav id="nav">
 								<ul>
 									<li class="{{ is_home() ? 'current' : ''}}"><a href="{{ home_url('/') }}">{{ pll__('首頁') }}</a></li>
-                  <li class="{{ is_page('sessions') ? 'current' : '' }}"><a href="{{ home_url('/sessions') }}">{{ pll__('議程表') }}</a></li>
+                  <li class="{{ is_page('schedule') ? 'current' : '' }}"><a href="{{ home_url('/schedule') }}">{{ pll__('議程表') }}</a></li>
                   <li class="{{ is_page('speakers') || is_singular('speaker') ? 'current' : '' }}"><a href="{{ home_url('/speakers') }}">{{ pll__('講師陣容') }}</a></li>
                   <li class="{{ is_page('partners') ? 'current' : '' }}"><a href="{{ home_url('/partners') }}">{{ pll__('合作夥伴') }}</a></li>
                   <li class="{{ is_page('register') ? 'current' : '' }}"><a href="{{ home_url('/register') }}">{{ pll__('立即購票') }}</a></li>
