@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('og')
+  <meta property="og:description"        content="{{ wp_trim_words(wp_strip_all_tags($speaker->post_content, true), 150 ) }}" />
+  <meta property="og:image"              content="{{ get_the_post_thumbnail_url( $speaker->ID, 'speaker-full' ) }}" />
+@show
+
 @section('content')
 <section class="container">
   <article class="box post">

@@ -8,6 +8,12 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     {{ wp_head() }}
+    <meta property="og:url"                content="{{ home_url(add_query_arg(array())) }}" />
+    <meta property="og:title"              content="{{ wp_get_document_title() }}" />
+    @section('og')
+      <meta property="og:description"        content="{{ wp_trim_words(wp_strip_all_tags(pll__('INTRODUCE'), true), 150 ) }}" />
+      <meta property="og:image"              content="{{ themosis_theme_assets() . '/images/tgdf.png' }}" />
+    @show
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">

@@ -13,6 +13,16 @@ Route::get('home', 'HomeController@index');
 
 Route::get('postTypeArchive', ['speaker', 'uses' => 'SpeakerController@index']);
 Route::get('singular', ['speaker', 'uses' => 'SpeakerController@show']);
+Route::get('single', function($post, $query) {
+  $id = pll_get_post($post->ID);
+  if($id !== false) {
+    $post = get_post($id);
+  }
+
+  return view('post', [
+    'post' => $post
+  ]);
+});
 
 Route::get('template', ['sessions', 'uses' => 'SessionController@index']);
 Route::get('template', ['partners', 'uses' => 'PartnerController@index']);
