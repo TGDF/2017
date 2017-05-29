@@ -9,7 +9,7 @@ use Theme\Models;
 class SpeakerController extends BaseController
 {
     public function index($speakers, $query) {
-      $lang = get_query_var('lang');
+      $lang = pll_current_language();
       $chunks = Models\Speaker::lang($lang)->orderBy('post_date', 'desc')->get()->chunk(4);
 
       return view('speakers', [

@@ -28,6 +28,11 @@
                   <li class="{{ is_page('partners') ? 'current' : '' }}"><a href="{{ home_url('/partners') }}">{{ pll__('合作夥伴') }}</a></li>
                   <li class="{{ is_page('register') ? 'current' : '' }}"><a href="{{ home_url('/register') }}">{{ pll__('立即購票') }}</a></li>
                   <li class="{{ is_page('opportunities') ? 'current' : '' }}"><a href="{{ home_url('/opportunities') }}">{{ pll__('商業媒合') }}</a></li>
+                  @if( pll_current_language() == 'zh')
+                    <li><a href="?lang=en">{{ pll__('English') }}</a></li>
+                  @else
+                    <li><a href="?lang=zh">{{ pll__('繁體中文') }}</a></li>
+                  @endif
                 </ul>
 							</nav>
 
