@@ -3,7 +3,7 @@
 Thumbs.db
 
 ### Composer
-composer.lock
+# composer.lock
 vendor/
 
 ### IDE
@@ -26,3 +26,6 @@ cs_fixer*
 .env
 .env.*
 !.env.local
+
+# Extra
+log/

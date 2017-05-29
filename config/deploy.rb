@@ -24,7 +24,7 @@ set :deploy_to, "/var/www/2017-v2"
 append :linked_files, ".env"
 
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "htdocs/content/uploads", "vendor"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
