@@ -9,7 +9,7 @@ use Theme\Models;
 class SessionController extends BaseController
 {
     public function index($page, $query, Models\Session $session) {
-      $lang = get_query_var('lang');
+      $lang = pll_current_language();
       $page = get_post(pll_get_post($page->ID));
       $sessions = Models\Session::lang($lang)->get();
 

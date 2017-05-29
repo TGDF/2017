@@ -9,7 +9,7 @@ use Theme\Models\Sponsor;
 class PartnerController extends BaseController
 {
   public function index() {
-    $lang = get_query_var('lang');
+    $lang = pll_current_language();
     $levels =  get_terms(['taxonomy' => 'sponsor_level', 'lang' => $lang]);
 
     return view('partners', [

@@ -60,7 +60,7 @@ class Session extends Model
   }
 
   public function types() {
-    $lang = get_query_var('lang');
+    $lang = pll_current_language();
     $availables = pll_languages_list();
 
     if(!in_array($lang, $availables)) {

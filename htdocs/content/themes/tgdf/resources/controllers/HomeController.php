@@ -10,7 +10,7 @@ use Theme\Models\Post;
 class HomeController extends BaseController
 {
   public function index() {
-    $lang = get_query_var('lang');
+    $lang = pll_current_language();
     $posts = Post::lang($lang)->orderBy('post_date', 'desc')->limit(9)->get()->chunk(3);
     $sponsors = $this->flatten_sponsors($lang)->chunk(6);
 
