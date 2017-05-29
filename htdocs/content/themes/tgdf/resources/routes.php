@@ -9,10 +9,7 @@
  *
  */
 
-Route::get('home', function()
-{
-    return view('home');
-});
+Route::get('home', 'HomeController@index');
 
 Route::get('page', ['speakers', 'uses' => 'SpeakerController@index']);
 Route::get('singular', ['speaker', 'uses' => 'SpeakerController@show']);

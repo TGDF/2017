@@ -29,6 +29,5 @@
     "gulp-util": "^3.0.7",
     "postcss-flexibility": "^1.1.0",
     "webpack": "^1.13.2"
-  },
-  "dependencies": {}
+  }
 }

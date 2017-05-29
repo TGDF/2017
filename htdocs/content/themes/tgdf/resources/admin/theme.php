@@ -8,10 +8,12 @@
 Asset::add('dopetrope', 'css/dopetrope.min.css', false, '1.0', 'all');
 Asset::add('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, '1.0', 'all');
 Asset::add('app', 'css/application.min.css', ['dopetrope'], '1.0', 'all');
+Asset::add('slick-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', false, '1.6.0', 'all');
 
+Asset::add('slick-js', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', ['jquery'], '1.6.0', false);
 Asset::add('theme', 'js/theme.min.js', ['jquery'], '1.0', true);
-Asset::add('util', 'js/util.min.js', false, '1.0', true);
-Asset::add('main', 'js/main.min.js', false, '1.0', true);
+Asset::add('util', 'js/util.min.js', ['theme'], '1.0', true);
+Asset::add('main', 'js/main.min.js', ['theme'], '1.0', true);
 
 // Polylang
 pll_register_string(THEME_TEXTDOMAIN, '首頁', 'Navigation');
@@ -33,3 +35,6 @@ pll_register_string(THEME_TEXTDOMAIN, '兩人或兩人以上團體，可透過�
 pll_register_string(THEME_TEXTDOMAIN, '學生票', 'Register');
 pll_register_string(THEME_TEXTDOMAIN, 'TWD 1,000', 'Register');
 pll_register_string(THEME_TEXTDOMAIN, '學生購票方案，報到時須出示學生證。', 'Register');
+
+pll_register_string(THEME_TEXTDOMAIN, 'INTRODUCE', 'Home');
+pll_register_string(THEME_TEXTDOMAIN, '最新消息', 'Home');

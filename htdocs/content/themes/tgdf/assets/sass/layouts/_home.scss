@@ -26,6 +26,7 @@
     top: 0;
     left: 0;
     margin: 0;
+    padding: 1em;
   }
 }
 
@@ -48,8 +49,8 @@
     background-size: contain;
   }
 
-  .slider1 { background-image: url('../assets/slides/slide_1.jpg'); }
-  .slider2 { background-image: url('../assets/slides/slide_2.jpg'); }
+  .slider1 { background-image: url('../images/slides/slide_1.jpg'); }
+  .slider2 { background-image: url('../images/slides/slide_2.jpg'); }
 }
 
 #intro .home__introduce {
