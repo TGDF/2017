@@ -11,7 +11,7 @@
 
 Route::get('home', 'HomeController@index');
 
-Route::get('page', ['speakers', 'uses' => 'SpeakerController@index']);
+Route::get('postTypeArchive', ['speaker', 'uses' => 'SpeakerController@index']);
 Route::get('singular', ['speaker', 'uses' => 'SpeakerController@show']);
 
 Route::get('template', ['sessions', 'uses' => 'SessionController@index']);

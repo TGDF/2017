@@ -2,7 +2,7 @@
 
 use Theme\Models\Session;
 
-PostType::make('speaker', 'Speakers', 'Speaker')->set([
+PostType::make('speaker', pll__('講師陣容'), pll__('講師'))->set([
   'public' => true,
   'exclude_from_search' => true,
   'menu_position' => 20,
