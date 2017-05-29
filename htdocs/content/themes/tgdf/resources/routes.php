@@ -26,4 +26,14 @@ Route::get('template', ['register', function($page, $query) {
     'page' => $page
   ]);
 }]);
-Route::get('template', ['b2b', 'uses' => 'B2BController@index']);
+
+Route::get('template', ['b2b', function($page, $query) {
+  $id = pll_get_post($page->ID);
+  if($id !== false) {
+    $page = get_post($id);
+  }
+
+  return view('b2b', [
+    'page' => $page
+  ]);
+}]);
