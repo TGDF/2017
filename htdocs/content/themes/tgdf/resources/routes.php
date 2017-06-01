@@ -10,16 +10,6 @@
  */
 
 Route::get('home', 'HomeController@index');
-Route::get('page', function($page, $query) {
-  $id = pll_get_post($page->ID);
-  if($id !== false) {
-    $page = get_post($id);
-  }
-
-  return view('page', [
-    'page' => $page
-  ]);
-});
 
 Route::get('postTypeArchive', ['speaker', 'uses' => 'SpeakerController@index']);
 Route::get('singular', ['speaker', 'uses' => 'SpeakerController@show']);
@@ -57,3 +47,14 @@ Route::get('template', ['b2b', function($page, $query) {
     'page' => $page
   ]);
 }]);
+
+Route::get('page', function($page, $query) {
+  $id = pll_get_post($page->ID);
+  if($id !== false) {
+    $page = get_post($id);
+  }
+
+  return view('page', [
+    'page' => $page
+  ]);
+});
