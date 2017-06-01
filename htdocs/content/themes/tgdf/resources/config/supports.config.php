@@ -12,7 +12,7 @@ return [
     /* --------------------------------------------------------------- */
     // Enable post thumbnails
     /* --------------------------------------------------------------- */
-    'post-thumbnails' => ['post'],
+    'post-thumbnails' => ['post', 'speaker', 'sponsor'],
 
     /* --------------------------------------------------------------- */
     // Enable post formats (aside, gallery, link, image, ...)

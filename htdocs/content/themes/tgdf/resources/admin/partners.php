@@ -23,6 +23,6 @@ Taxonomy::make('sponsor_level', 'sponsor', 'Levels', 'Level')->set([
 Metabox::make('Links', 'sponsor')->set([
   Field::text(
     'sponsor-link',
-    ['title' => 'Speakers']
+    ['title' => 'Link']
   )
 ]);
