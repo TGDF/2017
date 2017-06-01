@@ -22,6 +22,7 @@ pll_register_string(THEME_TEXTDOMAIN, '講師陣容', 'Navigation');
 pll_register_string(THEME_TEXTDOMAIN, '合作夥伴', 'Navigation');
 pll_register_string(THEME_TEXTDOMAIN, '立即購票', 'Navigation');
 pll_register_string(THEME_TEXTDOMAIN, '商業媒合', 'Navigation');
+pll_register_string(THEME_TEXTDOMAIN, '人才招募', 'Navigation');
 
 pll_register_string(THEME_TEXTDOMAIN, '閱讀更多', 'User Interface');
 
