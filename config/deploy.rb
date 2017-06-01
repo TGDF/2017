@@ -21,7 +21,7 @@ set :deploy_to, "/var/www/2017-v2"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, ".env"
+append :linked_files, ".env.production", "config/shared.php"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "htdocs/content/uploads", "vendor"
