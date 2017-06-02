@@ -11,7 +11,7 @@ class SessionController extends BaseController
     public function index($page, $query, Models\Session $session) {
       $lang = pll_current_language();
       $page = get_post(pll_get_post($page->ID));
-      $sessions = Models\Session::lang($lang)->get();
+      $sessions = Models\Session::lang($lang)->orderBy('menu_order', 'asc')->get();
 
       return view('sessions', [
         'page' => $page,
@@ -47,6 +47,9 @@ class SessionController extends BaseController
         }
 
         array_push($group[$time->term_id][$room->term_id], $session);
+        usort($group[$time->term_id][$room->term_id], function($a, $b) {
+          return $a->menu_order > $b->menu_order ? 1 : -1;
+        });
       }
 
       return $group;
