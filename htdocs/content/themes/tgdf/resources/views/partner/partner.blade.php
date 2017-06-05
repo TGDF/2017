@@ -3,7 +3,7 @@
     <section class="box">
       <div class="row">
         <div class="3u 12u(mobile)">
-          <a href="{{ $sponsor->link() }}" class="image">
+          <a href="{{ $sponsor->link() }}" target="_blank" class="image">
             <img src="{{ $sponsor->logo() }}" alt="{{ $sponsor->post_title }}" />
           </a>
         </div>
