@@ -15,6 +15,10 @@ PostType::make('indie_game', 'Indie Games', 'Indie Game')->set([
 
 Metabox::make('Links', 'indie_game')->set([
   Field::text(
+    'team-name',
+    ['title' => 'Team Name']
+  ),
+  Field::text(
     'indie-game-url',
     ['title' => 'Link']
   ),
