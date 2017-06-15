@@ -1,0 +1,22 @@
+.indie-space__banner.indie-space__banner.indie-space__banner {
+  margin: -8em 0 -12em;
+
+  div {
+    font-size: 0;
+  }
+
+  @media screen and (max-width: 736px) {
+    margin: -6em 0;
+  }
+}
+
+.indie-game__item {
+}
+
+.indie-game__team-name {
+  margin-top: .5em;
+  display: block;
+  font-size: .75em;
+  font-weight: 500;
+  color: lighten(black, 50%);
+}

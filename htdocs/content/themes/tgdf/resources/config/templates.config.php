@@ -13,5 +13,6 @@ return [
   'sessions' => ['Sessions', ['page']],
   'partners' => ['Partners', ['page']],
   'register' => ['Register', ['page']],
+  'indie_space' => ['Indie Space', ['page']],
   'b2b' => ['B2B Program', ['page']],
 ];

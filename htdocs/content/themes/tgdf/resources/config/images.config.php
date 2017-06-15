@@ -19,5 +19,6 @@ return [
     'speaker-small' => [256, 256, true, true],
     'speaker-full' => [512, 512, true, true],
     'sponsor-logo' => [600, 400, true, true],
-    'sponsor-logo-small' => [300, 200, true, true]
+    'sponsor-logo-small' => [300, 200, true, true],
+    'indie-game' => [400, 200, true, true]
 ];

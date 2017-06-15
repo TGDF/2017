@@ -26,6 +26,7 @@ Route::get('single', function($post, $query) {
 
 Route::get('template', ['sessions', 'uses' => 'SessionController@index']);
 Route::get('template', ['partners', 'uses' => 'PartnerController@index']);
+Route::get('template', ['indie_space', 'uses' => 'IndieSpaceController@index']);
 Route::get('template', ['register', function($page, $query) {
   $id = pll_get_post($page->ID);
   if($id !== false) {

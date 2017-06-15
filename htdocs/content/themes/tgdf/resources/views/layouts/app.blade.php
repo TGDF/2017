@@ -35,6 +35,7 @@
                   <li class="{{ is_page('register') ? 'current' : '' }}"><a href="{{ home_url('/register') }}">{{ pll__('立即購票') }}</a></li>
                   <li class="{{ is_page('opportunities') ? 'current' : '' }}"><a href="{{ home_url('/opportunities') }}">{{ pll__('商業媒合') }}</a></li>
                   <li class="{{ is_page('journey') ? 'current' : '' }}"><a href="{{ home_url('/journey') }}">{{ pll__('人才招募') }}</a></li>
+                  <li class="{{ is_page('indie_space') ? 'current' : '' }}"><a href="{{ home_url('/indie_space') }}">{{ pll__('獨立遊戲') }}</a></li>
                   @if( pll_current_language() == 'zh')
                     <li><a href="?lang=en">{{ pll__('English') }}</a></li>
                   @else
