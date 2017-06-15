@@ -1,12 +1,19 @@
+#banner.indie-space__banner-container {
+  padding: 0;
+}
+
 .indie-space__banner.indie-space__banner.indie-space__banner {
-  margin: -8em 0 -12em;
+  margin-bottom: -4em;
 
   div {
     font-size: 0;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   @media screen and (max-width: 736px) {
-    margin: -6em 0;
   }
 }
 

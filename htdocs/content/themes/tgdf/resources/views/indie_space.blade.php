@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('header')
-  <section id="banner">
+  <section id="banner" class="indie-space__banner-container">
     <div class="indie-space__banner">
       <div><img src="{{ themosis_theme_assets() . '/images/indie_space.png' }}" /></div>
     </div>
