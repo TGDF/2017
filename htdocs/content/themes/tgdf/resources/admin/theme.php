@@ -26,6 +26,7 @@ pll_register_string(THEME_TEXTDOMAIN, '人才招募', 'Navigation');
 pll_register_string(THEME_TEXTDOMAIN, '獨立遊戲', 'Navigation');
 
 pll_register_string(THEME_TEXTDOMAIN, '閱讀更多', 'User Interface');
+pll_register_string(THEME_TEXTDOMAIN, '觀看影片', 'User Interface');
 
 pll_register_string(THEME_TEXTDOMAIN, 'BUY_TICKET_LINK', 'Register');
 pll_register_string(THEME_TEXTDOMAIN, '一般票', 'Register');
