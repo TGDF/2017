@@ -53,8 +53,29 @@
   .slider2 { background-image: url('../images/slides/slide_2.jpg'); }
 }
 
+#intro {
+  section {
+    padding-bottom: 0;
+  }
+}
+
 #intro .home__introduce {
   p {
     margin-bottom: 1em;
   }
+}
+
+#map {
+  text-align: left;
+
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: .5em;
+  }
+  p { margin-bottom: 1em; }
 }

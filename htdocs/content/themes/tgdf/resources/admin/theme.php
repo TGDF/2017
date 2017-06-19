@@ -40,4 +40,6 @@ pll_register_string(THEME_TEXTDOMAIN, 'TWD 1,000', 'Register');
 pll_register_string(THEME_TEXTDOMAIN, '學生購票方案，報到時須出示學生證。', 'Register');
 
 pll_register_string(THEME_TEXTDOMAIN, 'INTRODUCE', 'Home');
+pll_register_string(THEME_TEXTDOMAIN, 'MAPINFO', 'Home');
+pll_register_string(THEME_TEXTDOMAIN, '交通資訊', 'Home');
 pll_register_string(THEME_TEXTDOMAIN, '最新消息', 'Home');
