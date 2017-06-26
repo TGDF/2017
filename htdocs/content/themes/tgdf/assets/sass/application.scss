@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech');
 
+@mixin mobile {
+  @media screen and (max-width: 736px) {
+    @content;
+  }
+}
+
 @import 'variables';
 @import 'base';
 

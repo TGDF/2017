@@ -22,6 +22,7 @@
                 @if(is_array($sessions[$time->term_id]))
                   @foreach($rooms as $room)
                   <td class="schedule__table-col">
+                    <div class="schedule__room">{{ $room->name }}</div>
                     @if(array_key_exists($room->term_id, $sessions[$time->term_id]))
                       @foreach($sessions[$time->term_id][$room->term_id] as $session)
                         <div class="schedule__session">
