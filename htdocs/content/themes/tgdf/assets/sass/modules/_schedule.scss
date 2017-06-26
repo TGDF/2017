@@ -95,12 +95,18 @@
 }
 
 .schedule__session {
-  &:nth-child(2n) {
+  &:nth-child(3n) {
     padding-top: 1em;
     margin-top: 1em;
     border-top: 1px solid #EFEFEF;
 
     @include mobile {
+      border: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+        @include mobile {
       border: 0;
 
       margin: 0 -0.5em 1em;
